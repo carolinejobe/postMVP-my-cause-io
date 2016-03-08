@@ -16,18 +16,21 @@
 			<li><a href="#">Sign Up</a></li>
 		</ul>
 	</nav>
-
-<a href= "imageofRecipient.jpg"></a>
-
-	<p>
-	Placeholder text. Will be description of cause populated from recipient's post page.</p> 
-
-
-	</form>
 	
-	<button type="button" class="btn btn-default">Upvote!</button>
-	<button type="button" class="btn btn-default">Connect</button>
-	
+	<main>
+		<!-- Account avatar -->
+		<a href= "imageofRecipient.jpg"></a>
+		<!-- Cause description -->
+		<p>
+		</p> 
+		
+		<!-- Form for adding upvote to this post -->
+		<form action="">
+			<button type="button">Upvote!</button>
+		</form>
+		<form action="">
+			<button type="button">Connect</button>
+		</form>
 	</main>
 	
 	<footer>
