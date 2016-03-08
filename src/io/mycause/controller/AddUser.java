@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class AddUser {
 
-	@RequestMapping("/signup")
+	@RequestMapping("/profileSuccess")
 	public String addUser(@RequestParam("firstname") String firstname, @RequestParam("lastname") String lastname,
 			@RequestParam("email") String email, @RequestParam("password") String password) {
 		try {
