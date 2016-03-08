@@ -19,18 +19,18 @@ public class AddUser {
 			// create connection to mySQL database
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection c;
-			String connectionString = "jdbc:mysql://localhost:3306/sakila";
+			String connectionString = "jdbc:mysql://localhost:3306/my-cause-io";
 			c = DriverManager.getConnection(connectionString, "root", "admin");
 
 			// create mySQL insert statement
-			String insertStatement = "INSERT INTO 'sakila'.'actor'('first_name','last_name')VALUES(?,?)";
+			String insertStatement = "INSERT INTO 'my-cause-io'.'users'('firstname','lastname', 'email', 'password')VALUES(?,?,?,?)";
 
 			// create the mySQL insert preparedstatement
 			PreparedStatement insertPreparedStatement = c.prepareStatement(insertStatement);
-			insertPreparedStatement.setString(1, firstname);
-			insertPreparedStatement.setString(2, lastname);
-			insertPreparedStatement.setString(3, email);
-			insertPreparedStatement.setString(4, password);
+			insertPreparedStatement.setString(2, firstname);
+			insertPreparedStatement.setString(3, lastname);
+			insertPreparedStatement.setString(4, email);
+			insertPreparedStatement.setString(5, password);
 
 			// execute the preparedstatement
 			insertPreparedStatement.execute();
