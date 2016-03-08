@@ -21,7 +21,7 @@
 	
 	<!-- Signup form -->
 	<main>
-		<form action="/signup.html" method="post">
+		<form action="profileSuccess.html" method="post">
 			First name: <input type="text" name="firstname" required/>
 			Last name: <input type="text" name="lastname" required/>
 			Email address: <input type="email" name="email" required/>
