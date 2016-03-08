@@ -26,7 +26,7 @@
 			Last name: <input type="text" name="lastname" required/>
 			Email address: <input type="email" name="email" required/>
 			Password: <input type="password" name="password" required/>
-			<input type="submit" value="Login"/>
+			<input type="submit" value="Submit"/>
 		</form>
 	</main>
 	
