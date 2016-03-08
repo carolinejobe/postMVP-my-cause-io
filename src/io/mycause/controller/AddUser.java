@@ -13,7 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class AddUser {
 
 	@RequestMapping("/signup")
-	public ModelAndView addUser(@RequestParam("firstname") String firstname, @RequestParam("lastname") String lastname,
+	public String addUser(@RequestParam("firstname") String firstname, @RequestParam("lastname") String lastname,
 			@RequestParam("email") String email, @RequestParam("password") String password) {
 		try {
 			// create connection to mySQL database
@@ -35,11 +35,11 @@ public class AddUser {
 			// execute the preparedstatement
 			insertPreparedStatement.execute();
 
-			return new ModelAndView("testShowUser", "newUser", insertPreparedStatement);
+			return "profileSuccess";
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			return new ModelAndView("error", "errorMessage", e.getMessage());
+			return "error";
 		}
 	}
 }
