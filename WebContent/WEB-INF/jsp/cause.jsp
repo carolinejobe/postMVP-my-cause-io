@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Cause Description</title>
+<title>Cause Descriptiongit</title>
 </head>
 <body>
 	<!-- Site Navigation -->
@@ -16,10 +16,13 @@
 			<li><a href="#">Sign Up</a></li>
 		</ul>
 	</nav>
-	<form action= "submit">
-	<textarea name="Please describe your cause and what assistance you need." cols="50" rows="5">
 
-</textarea>
+<a href= "imageofRecipient.jpg"></a>
+
+	<p>
+	Placeholder text. Will be description of cause populated from recipient's post page.</p> 
+
+
 	</form>
 	
 	<button type="button" class="btn btn-default">Upvote!</button>
