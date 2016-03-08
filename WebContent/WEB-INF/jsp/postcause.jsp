@@ -10,10 +10,10 @@
 <!-- Site Navigation -->
 	<nav>
 		<ul>
-			<li><a href="#">Home</a></li>
-			<li><a href="#">Search</a></li>
-			<li><a href="#">Login</a></li>
-			<li><a href="#">Sign Up</a></li>
+			<li><a href="index.jsp">Home</a></li>
+			<li><a href="search.html">Search</a></li>
+			<li><a href="login.html">Login</a></li>
+			<li><a href="signup.html">Sign Up</a></li>
 		</ul>
 	</nav>
 	<a href= "imageofRecipient.jpg"></a>

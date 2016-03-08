@@ -44,13 +44,29 @@
 	<!-- Site Navigation -->
 	<nav>
 		<ul>
-			<li><a href="#">Home</a></li>
-			<li><a href="#">Search</a></li>
-			<li><a href="#">Login</a></li>
-			<li><a href="#">Sign Up</a></li>
+			<li><a href="index.jsp">Home</a></li>
+			<li><a href="search.html">Search</a></li>
+			<li><a href="login.html">Login</a></li>
+			<li><a href="signup.html">Sign Up</a></li>
 		</ul>
 	</nav>
+	
+	<main>
+		<!-- Account avatar -->
+		<img src= ""/>
+		<!-- Cause description -->
+		<p>
+		</p> 
+		
+		<!-- Form for adding upvote to this post -->
+		<form action="">
+			<button type="button">Upvote!</button>
+		</form>
+		<form action="">
+			<button type="button">Connect</button>
+		</form>
 
+<<<<<<< HEAD
 	<a href="imageofRecipient.jpg"></a>
 
 	<p>Placeholder text. Will be description of cause populated from
@@ -60,6 +76,8 @@
 
 	<button type="button" class="btn btn-default">Upvote!</button>
 	<button type="button" class="btn btn-default">Connect</button>
+=======
+>>>>>>> cfeea0126398701952b663afbc29b482b581f824
 
 	<!-- Facebook like/share buttons -->
 	<div class="fb-like" data-href="http://www.mycause.io"
@@ -84,6 +102,7 @@
 			}
 		}(document, 'script', 'twitter-wjs');
 	</script>
+
 
 	</main>
 
