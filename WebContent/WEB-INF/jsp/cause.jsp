@@ -10,18 +10,36 @@
 <body>
 
 	<!-- Facebook share JS SDK -->
-	<div id="fb-root"></div>
-	<script type="text/javascript">
+	<script>
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId : '1542145579413377',
+				xfbml : true,
+				version : 'v2.5'
+			});
+		};
+
 		(function(d, s, id) {
 			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id))
+			if (d.getElementById(id)) {
 				return;
+			}
 			js = d.createElement(s);
 			js.id = id;
-			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+			js.src = "//connect.facebook.net/en_US/sdk.js";
 			fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
+
+	<!-- Twitter JS code -->
+	var link = document.createElement('a'); link.setAttribute('href',
+	'https://twitter.com/share'); link.setAttribute('class',
+	'twitter-share-button'); link.setAttribute('style', 'margin-top:5px;');
+	link.setAttribute("data-text" , "I just helped someone!;
+	link.setAttribute("data-via" ,"denvycom") ;
+	link.setAttribute("data-size" ,"large") ;
+	this.lowermessageContainer.appendChild(link) ; twttr.widgets.load();
+	//very important
 
 	<!-- Site Navigation -->
 	<nav>
@@ -48,9 +66,20 @@
 			<button type="button">Connect</button>
 		</form>
 
+<<<<<<< HEAD
+	<a href="imageofRecipient.jpg"></a>
+
+	<p>Placeholder text. Will be description of cause populated from
+		recipient's post page.</p>
+
+
+
+	<button type="button" class="btn btn-default">Upvote!</button>
+	<button type="button" class="btn btn-default">Connect</button>
+=======
+>>>>>>> cfeea0126398701952b663afbc29b482b581f824
 
 	<!-- Facebook like/share buttons -->
-	<!--  -->
 	<div class="fb-like" data-href="http://www.mycause.io"
 		data-layout="standard" data-action="like" data-show-faces="true"
 		data-share="true"></div>
