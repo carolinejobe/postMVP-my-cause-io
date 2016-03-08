@@ -22,7 +22,7 @@
 	<main>
 		<p>Search for a cause by need (time, money, items)</p>
 		<form action="" method="post">
-			<input type="text" value="Search by need">
+			<input type="text" value="Search by need"/>
 			<input type="submit" value="Search"/>
 		</form>
 		
