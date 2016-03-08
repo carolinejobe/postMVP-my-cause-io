@@ -24,8 +24,6 @@ public class AddUser {
 				//create mySQL insert statement
 				String insertStatement = "INSERT INTO 'sakila'.'actor'('first_name','last_name')VALUES(?,?)";
 				
-				Statement s = c.createStatement();
-				
 				// create the mySQL insert preparedstatement
 				PreparedStatement insertPreparedStatement = c.prepareStatement(insertStatement);
 				insertPreparedStatement.setString(1, groupName);
