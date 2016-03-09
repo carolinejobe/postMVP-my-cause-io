@@ -1,7 +1,6 @@
 package io.mycause.controller;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
 import javax.naming.Context;
@@ -27,13 +26,12 @@ public class AddUser {
 ////////////
 			Context ctx = new InitialContext();
 			DataSource ds = (DataSource)ctx.lookup("java:comp/env/jdbc/dbb");
-			String connectionUrl = "jdbc:mysql://mycauseio.c8vanjxufcpj.us-west-2.rds.amazonaws.com:3306";
 			Connection conn = ds.getConnection(); 
 	//		Statement st= conn.createStatement(); 
 ////////////			
 			
 			// create mySQL insert statement
-			String insertStatement = "INSERT INTO mycauseio.users(firstname,lastname, email, password, organization)VALUES(?,?,?,?,?)";
+			String insertStatement = "INSERT INTO maindb.users(firstname,lastname, email, password, organization)VALUES(?,?,?,?,?)";
 
 			// create the mySQL insert preparedstatement
 			PreparedStatement insertPreparedStatement = conn.prepareStatement(insertStatement);
@@ -52,6 +50,7 @@ public class AddUser {
 
 		} catch (Exception e) {
 			e.printStackTrace();
+			System.out.println(e.getStackTrace());
 			return "error";
 		}
 	}
