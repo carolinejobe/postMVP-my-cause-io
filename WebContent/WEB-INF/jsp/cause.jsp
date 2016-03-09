@@ -13,7 +13,7 @@
 </head>
 
 <body>
-
+<!-- jdbc code needed to communicate user entries to db. -->
 	<!-- Facebook share JS SDK -->
 	<script>
 		window.fbAsyncInit = function() {
