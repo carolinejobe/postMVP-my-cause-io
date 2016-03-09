@@ -12,10 +12,12 @@
 </head>
 <body>
 <!-- Site Navigation -->
+	<!-- Site Navigation -->
 	<nav>
 		<ul>
 			<li><a href="index.jsp">Home</a></li>
 			<li><a href="search.html">Search</a></li>
+			<li><a href="postcause.html">Post Cause</a></li>
 			<li><a href="login.html">Login</a></li>
 			<li><a href="signup.html">Sign Up</a></li>
 		</ul>
