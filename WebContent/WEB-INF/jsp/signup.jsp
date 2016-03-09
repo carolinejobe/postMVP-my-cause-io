@@ -30,7 +30,7 @@
 		<form action="profileSuccess.html" method="post">
 			First name: <input type="text" name="firstname" required/>
 			Last name: <input type="text" name="lastname" required/>
-			Organization (if applicable): <input type="text" name="organization" required/>
+			Organization (if applicable): <input type="text" name="organization"/>
 			Email address: <input type="email" name="email" required/>
 			Enter a password: <input type="password" name="password" required/>
 			<input type="submit" value="Submit"/>
