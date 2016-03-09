@@ -15,4 +15,11 @@
 		<servlet-name>dispatch</servlet-name>
 		<url-pattern>*.html</url-pattern>
 	</servlet-mapping>
+	
+	<resource-ref>
+		<description>MySQL Datasource example</description>
+		<res-ref-name>jdbc/dbb</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+	</resource-ref>
+
 </web-app>
