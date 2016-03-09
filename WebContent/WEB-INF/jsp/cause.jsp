@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <title>Cause Description</title>
 </head>
 
@@ -65,7 +66,7 @@
 			<button type="button">Upvote!</button>
 		</form>
 		<form action="">
-			<button type="button">Connect</button>
+			<button type="button" id="connect">Connect</button>
 		</form>
 
 
@@ -100,5 +101,11 @@
 		<p>&copy; All rights reserved by Jeseekia Vaughn, Caroline Jobe,
 			Aaron Ribant, and Mark Day</p>
 	</footer>
+	
+	<!-- JQuery -->
+	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	
+	<script src="scripts/scripts.js"></script>
 </body>
 </html>
