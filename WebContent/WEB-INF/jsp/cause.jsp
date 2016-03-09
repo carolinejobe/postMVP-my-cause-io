@@ -32,14 +32,16 @@
 	</script>
 
 	<!-- Twitter JS code -->
+	<script>
 	var link = document.createElement('a'); link.setAttribute('href',
 	'https://twitter.com/share'); link.setAttribute('class',
 	'twitter-share-button'); link.setAttribute('style', 'margin-top:5px;');
-	link.setAttribute("data-text" , "I just helped someone!;
+	link.setAttribute("data-text" , "I just helped someone!");
 	link.setAttribute("data-via" ,"denvycom") ;
 	link.setAttribute("data-size" ,"large") ;
 	this.lowermessageContainer.appendChild(link) ; twttr.widgets.load();
 	//very important
+	</script>
 
 	<!-- Site Navigation -->
 	<nav>
@@ -66,18 +68,6 @@
 			<button type="button">Connect</button>
 		</form>
 
-<<<<<<< HEAD
-	<a href="imageofRecipient.jpg"></a>
-
-	<p>Placeholder text. Will be description of cause populated from
-		recipient's post page.</p>
-
-
-
-	<button type="button" class="btn btn-default">Upvote!</button>
-	<button type="button" class="btn btn-default">Connect</button>
-=======
->>>>>>> cfeea0126398701952b663afbc29b482b581f824
 
 	<!-- Facebook like/share buttons -->
 	<div class="fb-like" data-href="http://www.mycause.io"
