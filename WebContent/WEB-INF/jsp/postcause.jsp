@@ -1,4 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
+<%@ page import="javax.naming.Context,javax.naming.InitialContext" %>
+<%@ page import="javax.annotation.Resource" %>
+<%@page import="javax.sql.*"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,9 +31,28 @@
 	<a href= "imageofRecipient.jpg"></a>
 	<p>
 	Please describe what kind of assistance you are in need of.</p>
-	<form>
-	<button type="submit" form="form1" value="Submit">Submit</button>
+	
+	 <% 
+	 Context ctx = new InitialContext();
+			DataSource ds = (DataSource)ctx.lookup("java:comp/env/jdbc/dbb");
+			Connection conn = ds.getConnection();
+	 %>
+
+<!--  error message for line below: "datasource is null" -->
+<sql:query dataSource="${myvar}" var="result">
+	SELECT * from category;
+</sql:query>
+
+	<form method="GET">
+		<select name="category"><c:forEach var="row" items="${result.rows}">
+				<option value='<c:out value="${row.name}"/>'>
+				<c:out value="${row.name}" />
+				</option>
+				</c:forEach>
+		</select> 
+	<textarea name="Help title textbox." cols="50" rows="5"></textarea>
 	<textarea name="Help description textbox." cols="50" rows="5"></textarea>
+	<button type="submit" form="form1" value="Submit">Submit</button>
 	</form>
 	
 	<footer>
