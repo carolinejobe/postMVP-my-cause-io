@@ -25,7 +25,7 @@ public class AddPostToDB {
 			// need to update insertStatement to account for jumping with FKs:
 			// user selects a category, need to update post table with that cat_ID.
 			// -->!! also need to populate the user_id based on who is logged in when post is created. 
-			String insertStatement = "INSERT INTO mycauseio.post(post_headline, cat_id, post_desc, )VALUES(?,?,?,?)";
+			String insertStatement = "INSERT INTO maindb.post(post_headline, cat_id, post_desc, )VALUES(?,?,?,?)";
 
 			// create the mySQL insert preparedstatement
 			PreparedStatement insertPreparedStatement = c.prepareStatement(insertStatement);
