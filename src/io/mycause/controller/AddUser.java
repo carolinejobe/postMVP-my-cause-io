@@ -12,7 +12,7 @@ public class AddUser {
 
 	@RequestMapping("/profileSuccess")
 	public String addUser(@RequestParam("firstname") String firstname, @RequestParam("lastname") String lastname,
-			@RequestParam("email") String email, @RequestParam("password") String password) {
+			@RequestParam("email") String email, @RequestParam("password") String password, @RequestParam("organization") String organization) {
 		try {
 			// create connection to mySQL database
 			Class.forName("com.mysql.jdbc.Driver");
@@ -21,7 +21,7 @@ public class AddUser {
 			c = DriverManager.getConnection(connectionString, "root", "admin");
 
 			// create mySQL insert statement
-			String insertStatement = "INSERT INTO mycauseio.users(firstname,lastname, email, password)VALUES(?,?,?,?)";
+			String insertStatement = "INSERT INTO mycauseio.users(firstname,lastname, email, password, organization)VALUES(?,?,?,?,?)";
 
 			// create the mySQL insert preparedstatement
 			PreparedStatement insertPreparedStatement = c.prepareStatement(insertStatement);
@@ -29,6 +29,7 @@ public class AddUser {
 			insertPreparedStatement.setString(2, lastname);
 			insertPreparedStatement.setString(3, email);
 			insertPreparedStatement.setString(4, password);
+			insertPreparedStatement.setString(5, organization);
 
 			// execute the preparedstatement
 			insertPreparedStatement.execute();
