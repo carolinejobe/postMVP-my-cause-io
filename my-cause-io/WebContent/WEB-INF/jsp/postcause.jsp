@@ -14,9 +14,10 @@
 <!-- Site specific styles -->
 <link rel="stylesheet" href="css/styles.css">
 <title>MyCause.io</title>
+
 </head>
 <body>
-	<!-- --------------------------- SITE NAVIGATION BAR ------------------------ -->
+	<!-- --------------------------- START SITE NAVIGATION BAR ------------------------ -->
 
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
@@ -42,67 +43,84 @@
 			<!--/.nav-collapse -->
 		</div>
 	</nav>
+	<!-- --------------------------- END SITE NAVIGATION BAR ------------------------ -->
 
-
-	<!-- ------------------------------ PANEL ADDED FOR SPACING ------------------ -->
+	<!-- ------------------------------ START PANEL ADDED FOR SPACING ------------------ -->
 
 	<div class="panel panel-default">
 		<div class="panel-body">Basic panel example</div>
 	</div>
 
-	<!-- /------------------------------ PANEL ADDED FOR SPACING ------------------ -->
+	<!-- ------------------------------ END PANEL ADDED FOR SPACING ------------------ -->
 
-	<a href="imageofRecipient.jpg"></a>
-	<h2>Please describe what kind of assistance you are in need of.</h2>
-	<Context ctx=new InitialContext();
+	<!-- ------------------------------ START JUMBOTRON ------------------ -->
+	<div class="container">
+		<div class="jumbotron">
+			<h2>Please describe what kind of assistance you are in need of.</h2>
+
+			<a href="imageofRecipient.jpg"></a>
+			<Context ctx=new InitialContext();
             DataSource
-		ds=(DataSource)ctx.lookup(
-		"java:comp/env/jdbc/dbb");
+				ds=(DataSource)ctx.lookup(
+				"java:comp/env/jdbc/dbb");
             Connection
-		conn=ds.getConnection();> <sql:query dataSource="${myvar}"
-		var="result">
+				conn=ds.getConnection();> <sql:query dataSource="${myvar}"
+				var="result">
     SELECT * from category;
-</sql:query>
-<br>
-	<form method="post">
-		<select name="genre"><c:forEach var="row"
-				items="${result.rows}">
-				<option value='<c:out value="${row.name}"/>'>
-					<c:out value="${row.name}" />
-				</option>
-			</c:forEach>
-		</select>
-		<br>
-		<br>
-		<!-- ------------------------ TITLE INPUT WITH BUTTON -------------- -->
-		<div class="row">
-			<div class="col-lg-6">
-				<div class="input-group">
-					<span class="input-group-btn">
-						<button class="btn btn-default" type="button">Title</button>
-					</span> <input type="text" class="form-control"
-						placeholder="We need help with...">
+</sql:query> <br>
+			<form method="post">
+				<select name="genre"><c:forEach var="row"
+						items="${result.rows}">
+						<option value='<c:out value="${row.name}"/>'>
+							<c:out value="${row.name}" />
+						</option>
+					</c:forEach>
+				</select> <br> <br>
+				<!-- ------------------------ START TITLE INPUT WITH BUTTON -------------- -->
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="input-group">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="button">Add Title</button>
+							</span> <input type="text" class="form-control"
+								placeholder="We need help with...">
+						</div>
+					</div>
 				</div>
-			</div>
+				<!-- ------------------------  END TITLE INPUT WITH BUTTON -------------- -->
+				<br>
+
+				<!-- ------------------------  START TEXT AREA -------------- -->
+				<textarea name="Post Headline textbox." cols="50" rows="5"></textarea>
+				<br>
+				<textarea name="Post description textbox." cols="50" rows="5"></textarea>
+				<button type="submit" form="form1" value="Submit">Submit</button>
+				<!-- ------------------------ END TEXT AREA -------------- -->
+
+				<br>
+			</form>
+			<br>
+
+			<footer>
+				<p>&copy; All rights reserved by Jeseekia Vaughn, Caroline Jobe,
+					Aaron Ribant, and Mark Day</p>
+			</footer>
 		</div>
-		<!-- /.row -->
-		<!-- ------------------------ /TITLE INPUT WITH BUTTON -------------- -->
-		<br> 
-		<textarea name="Post Headline textbox." cols="50" rows="5"></textarea>
-		<br>
-		<textarea name="Post description textbox." cols="50" rows="5"></textarea>
-		<button type="submit" form="form1" value="Submit">Submit</button>
-	</form>
-	<footer>
-		<p>&copy; All rights reserved by Jeseekia Vaughn, Caroline Jobe,
-			Aaron Ribant, and Mark Day</p>
-	</footer> <!-- JQuery --> <script
-		src="http://code.jquery.com/jquery-1.12.0.min.js"></script> <script
-		src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script> <!-- Latest compiled and minified JavaScript -->
+	</div>
+	<!-- ------------------------------ END JUMBOTRON ------------------ -->
+
+
+
+
+	<!-- JQuery -->
+	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
 	<script
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
 		integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-		crossorigin="anonymous"></script> <!-- Site scripts --> <script
-		src="scripts/scripts.js"></script>
+		crossorigin="anonymous"></script>
+	<!-- Site scripts -->
+	<script src="scripts/scripts.js"></script>
 </body>
 </html>
