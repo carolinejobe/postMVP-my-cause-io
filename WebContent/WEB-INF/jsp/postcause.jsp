@@ -47,10 +47,10 @@
 		<!-- 		</select> -->
 
 		<select name="category">
-			<option value="money">money</option>
-			<option value="time">time</option>
-			<option value="food">food</option>
-			<option value="material">material</option>
+			<option value="1">money</option>
+			<option value="2">time</option>
+			<option value="3">food</option>
+			<option value="4">material</option>
 		</select>
 		
 		<input type="text" name="postheadline" cols="50" rows="3" required></input>
