@@ -37,7 +37,7 @@
 
 
 
-	<form method="POST">
+	<form action="postSuccess.html" method="POST">
 		<%-- 		<select name="category"><c:forEach var="row" --%>
 		<%-- 				items="${result.rows}"> --%>
 		<%-- 				<option value='<c:out value="${row.name}"/>'> --%>
@@ -51,10 +51,10 @@
 			<option value="time">time</option>
 			<option value="food">food</option>
 			<option value="material">material</option>
-
 		</select>
-		<textarea name="Help title textbox." cols="50" rows="5"></textarea>
-		<textarea name="Help description textbox." cols="50" rows="5"></textarea>
+		
+		<input type="text" name="postheadline" cols="50" rows="3" required></input>
+		<input type="text" name="post_desc" cols="50" rows="5" required></input>
 		<button type="submit" form="form1" value="Submit">Submit</button>
 	</form>
 
