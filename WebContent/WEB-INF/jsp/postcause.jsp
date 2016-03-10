@@ -53,8 +53,8 @@
 			<option value="4">material</option>
 		</select>
 		
-		<input type="text" name="postheadline" cols="50" rows="3" required></input>
-		<input type="text" name="post_desc" cols="50" rows="5" required></input>
+		<input type="text" name="postheadline" required></input>
+		<input type="text" name="post_desc" required></input>
 		<button type="submit" form="form1" value="Submit">Submit</button>
 	</form>
 
