@@ -5,7 +5,16 @@ public class Post {
 	private String description;
 	private int posterId;
 	private int postId;
+	private int postUpvotes;
 	
+	public int getPostUpvotes() {
+		return postUpvotes;
+	}
+
+	public void setPostUpvotes(int postUpvotes) {
+		this.postUpvotes = postUpvotes;
+	}
+
 	public Post() {
 		
 	}

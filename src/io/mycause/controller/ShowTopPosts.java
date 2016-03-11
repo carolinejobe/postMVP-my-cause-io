@@ -37,9 +37,11 @@ public class ShowTopPosts {
 					
 					String postHeadline = results.getString(2);
 					String postDescription = results.getString(3);
+					int postUpvotes = results.getInt(8);
 					Post tempPost = new Post();
 					tempPost.setTitle(postHeadline);
 					tempPost.setDescription(postDescription);
+					tempPost.setPostUpvotes(postUpvotes);
 					
 					topPosts.add(tempPost);
 				

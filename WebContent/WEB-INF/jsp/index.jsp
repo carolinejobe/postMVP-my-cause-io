@@ -54,6 +54,7 @@
 				<h2>${myvar.getTitle()}</h2>
 				<!-- Post description -->
 				<p>${myvar.getDescription()}</p>
+				<p>Upvotes: ${myvar.getPostUpvotes() }</p>
 			</div>
 			
 		
