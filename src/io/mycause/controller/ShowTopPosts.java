@@ -29,7 +29,7 @@ public class ShowTopPosts {
 			Connection conn = ds.getConnection(); 
 			
 			Statement s =  conn.createStatement();
-			ResultSet results = s.executeQuery("select * from maindb.posts");
+			ResultSet results = s.executeQuery("select * from maindb.posts limit 10");
 			
 			ArrayList<Post> topPosts = new ArrayList<>();
 			
