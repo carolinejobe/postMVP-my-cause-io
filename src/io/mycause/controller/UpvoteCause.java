@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class UpvoteCause {
 
 	@RequestMapping(value="/upvote", method=RequestMethod.GET)
-	public String upvotePost(@RequestParam("") String upvote) {
+	public String upvotePost(@RequestParam String upvote) {
 
 		try {
 			Context ctx = new InitialContext();

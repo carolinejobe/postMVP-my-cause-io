@@ -53,8 +53,8 @@
 			<option value="4">material</option>
 		</select><br>
 		
-	Enter a headline:<input type="text" name="postheadline" required></input><br>
-	Enter a description:<input type="text" name="post_desc" required></input><br>
+	Enter a headline:<input type="text" name="postheadline" maxlength="59" required></input><br>
+	Enter a description:<input type="text" name="post_desc" maxlength="249" required></input><br>
 		<button type="submit" form="form1" value="Submit">Submit</button>
 	</form>
 
