@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +14,7 @@
 </head>
 <body>
 	<!-- Site Navigation -->
-	<nav class="navbar navbar-inverse navbar-fixed-top">
+	<nav class="">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -42,16 +43,24 @@
 	</header>
 	
 	<!-- List of postings based on upvotes -->
-	<main>
-		<div class="post-preview">
-			<!-- Post preview image -->
-			<img src="#"/>
-			<!-- Post description -->
-			<p></p>
-		</div>
+	<main class="container">
+		
+		
+		<c:forEach var="myvar" items="${tenPosts}">
+			<div class="post-preview">
+				<!-- Post preview image -->
+				<img src="#"/>
+				<!-- Post title -->
+				<h2>${myvar.getTitle()}</h2>
+				<!-- Post description -->
+				<p>${myvar.getDescription()}</p>
+			</div>
+			
+		
+		</c:forEach>
 	</main>
 	
-	<footer>
+	<footer class="container">
 		<p>&copy; All rights reserved by Jeseekia Vaughn, Caroline Jobe,
 			Aaron Ribant, and Mark Day</p>
 	</footer>
