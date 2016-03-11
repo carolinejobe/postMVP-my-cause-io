@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class UpvoteCause {
 
-	@RequestMapping("/upvoteCause")
+	@RequestMapping("/Postcause")
 	public String upvotePost(){
 		
 		
@@ -24,7 +24,7 @@ public class UpvoteCause {
 			
 			// create mySQL insert statement.
 			//"update posts set upvotes=upvotes+1 where post_id=X"
-			String insertStatement = "INSERT INTO maindb.posts()";
+			String insertStatement = "UPDATE maindb.posts()";
 			
 			// create the mySQL insert preparedstatement
 			PreparedStatement insertPreparedStatement = conn.prepareStatement(insertStatement);
@@ -32,7 +32,7 @@ public class UpvoteCause {
 			// execute the preparedstatement
 			insertPreparedStatement.execute();
 			
-			return "upvoteCause";
+			return "Postcause";
 			
 		} catch (Exception e) {
 			e.printStackTrace();
