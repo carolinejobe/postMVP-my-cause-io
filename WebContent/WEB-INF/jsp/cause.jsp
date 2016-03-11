@@ -67,8 +67,8 @@
 		</p> 
 		
 		<!-- Form for adding upvote to this post -->
-		<form action="">
-			<button type="button">Upvote!</button>
+		<form action="<c:url value="/upvote" />" method="GET">
+			<button type="button" id="upvote">Upvote!</button>
 		</form>
 		<form action="">
 			<button type="button" id="connect">Connect</button>
