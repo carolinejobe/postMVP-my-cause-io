@@ -54,7 +54,7 @@
 	
 	    <!-- ------------------------------ START COOKIE TEST CODE ------------------ -->
 	    
-<%-- 	    <% --%>
+<%-- 	    <% 
 // 		Cookie[] clientCookies = request.getCookies();
 // 		if (clientCookies == null) {
 // 			out.println("No cookie");
@@ -72,8 +72,8 @@
 	<!-- Login form -->
 	<main>
 		<form action="login.html" method="post">
-			Email: <input type="email" required/>
-			Password: <input type="password" required/>
+			Email: <input type="text" name="email" required/>
+			Password: <input type="text" name="password" required/>
 			<input type="submit" value="Login"/>
 		</form>
 	</main>

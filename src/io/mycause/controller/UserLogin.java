@@ -17,8 +17,8 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class UserLogin {
 	
-	@RequestMapping("/login")
-	public ModelAndView helloWorld(@RequestParam ("email") String email, @RequestParam ("password") String password)
+	@RequestMapping("/loginSuccess")
+	public ModelAndView helloWorld(@RequestParam("email") String email, @RequestParam("password") String password)
 	{
 		try {
 			
@@ -35,10 +35,10 @@ public class UserLogin {
 				
 				
 				
-			return new ModelAndView("login", "message", email);
+			return new ModelAndView("loginSuccess", "message", "yo");
 			
 			else
-				new ModelAndView("login","message","Test Login Message");
+				new ModelAndView("loginSuccess","message","Test Login Message");
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
