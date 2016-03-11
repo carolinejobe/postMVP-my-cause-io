@@ -46,15 +46,15 @@
 		<%-- 			</c:forEach> --%>
 		<!-- 		</select> -->
 
-		<select name="category">
+	Select a category:<select name="category">
 			<option value="1">money</option>
 			<option value="2">time</option>
 			<option value="3">food</option>
 			<option value="4">material</option>
-		</select>
+		</select><br>
 		
-		<input type="text" name="postheadline" required></input>
-		<input type="text" name="post_desc" required></input>
+	Enter a headline:<input type="text" name="postheadline" required></input><br>
+	Enter a description:<input type="text" name="post_desc" required></input><br>
 		<button type="submit" form="form1" value="Submit">Submit</button>
 	</form>
 
