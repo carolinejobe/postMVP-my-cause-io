@@ -26,6 +26,7 @@ public class UpvoteCause {
 			// create mySQL insert statement.
 			// --> make syntax below the insertStatement once we have a way to determine
 			// what the post_id is: "update posts set upvotes=upvotes+1 where post_id=X"
+			// also need a row lock to handle multiple users
 			
 			String insertStatement = "UPDATE maindb.posts()";
 
