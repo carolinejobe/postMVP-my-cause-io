@@ -71,7 +71,7 @@
 	
 	<!-- Login form -->
 	<main>
-		<form action="login.html" method="post">
+		<form action="processlogin.html" method="post">
 			Email: <input type="text" name="email" required/>
 			Password: <input type="text" name="password" required/>
 			<input type="submit" value="Login"/>
