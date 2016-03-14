@@ -55,6 +55,10 @@
 				<!-- Post description -->
 				<p>${myvar.getDescription()}</p>
 				<p>Upvotes: ${myvar.getPostUpvotes() }</p>
+				<form action="cause.html">
+					<input type="hidden" name="postId" value="${myvar.getPostId()}"/>
+					<input type="submit" value="visit" name="visit"/>
+				</form>
 			</div>
 			
 		
