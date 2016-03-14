@@ -22,7 +22,7 @@
 			<li><a href="signup.html">Sign Up</a></li>
 		</ul>
 	</nav>
-<h1>error</h1>
+<h1>${message}</h1>
 
 	<footer>
 		<p>&copy; All rights reserved by Jeseekia Vaughn, Caroline Jobe,
