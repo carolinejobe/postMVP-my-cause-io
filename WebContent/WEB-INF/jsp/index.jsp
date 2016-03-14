@@ -47,7 +47,7 @@
 		
 		
 		<c:forEach var="myvar" items="${tenPosts}">
-			<div class="post-preview">
+			<div class="postpreview">
 				<!-- Post preview image -->
 				<img src="${myvar.getImageLink()}"/>
 				<!-- Post title -->
