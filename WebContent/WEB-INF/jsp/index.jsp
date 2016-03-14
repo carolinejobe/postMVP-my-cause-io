@@ -49,7 +49,7 @@
 		<c:forEach var="myvar" items="${tenPosts}">
 			<div class="post-preview">
 				<!-- Post preview image -->
-				<img src="#"/>
+				<img src="${myvar.getImageLink()}"/>
 				<!-- Post title -->
 				<h2>${myvar.getTitle()}</h2>
 				<!-- Post description -->
@@ -57,6 +57,7 @@
 				<p>Upvotes: ${myvar.getPostUpvotes() }</p>
 				<form action="cause.html">
 					<input type="hidden" name="postId" value="${myvar.getPostId()}"/>
+					<input type="hidden" name="catId" value="${myvar.getCatId()}"/>
 					<input type="submit" value="visit" name="visit"/>
 				</form>
 			</div>

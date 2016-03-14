@@ -6,7 +6,25 @@ public class Post {
 	private int posterId;
 	private int postId;
 	private int postUpvotes;
+	private int catId;
+	private String imageLink;
 	
+	public String getImageLink() {
+		return imageLink;
+	}
+
+	public void setImageLink(String imageLink) {
+		this.imageLink = imageLink;
+	}
+
+	public int getCatId() {
+		return catId;
+	}
+
+	public void setCatId(int catId) {
+		this.catId = catId;
+	}
+
 	public int getPostUpvotes() {
 		return postUpvotes;
 	}

@@ -40,12 +40,32 @@ public class ShowTopPosts {
 				String postHeadline = results.getString(2);
 				String postDescription = results.getString(3);
 				int postUpvotes = results.getInt(8);
+				int catId = results.getInt(4);
+				String imageLink="";
+				
+				switch (catId)
+				{
+				case 1:
+					imageLink="images/moneyIconSmall.jpg";
+					break;
+				case 2:
+					imageLink="images/timeIconSmall.jpg";
+					break;
+					case 3:
+						imageLink="images/foodIconsmall.jpg";
+						break;
+					case 4:
+						imageLink="images/materialsIconSmall.jpg";
+						break;
+				
+				}
 				Post tempPost = new Post();
 				tempPost.setTitle(postHeadline);
 				tempPost.setDescription(postDescription);					
 				tempPost.setPostUpvotes(postUpvotes);
 				tempPost.setPostId(postId);
-					
+				tempPost.setCatId(catId);
+				tempPost.setImageLink(imageLink);
 				topPosts.add(tempPost);
 				
 			}
