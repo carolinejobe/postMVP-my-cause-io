@@ -60,11 +60,14 @@
 	</nav>
 	
 	<main>
+		<h1>${info[0]}</h1>
 		<!-- Account avatar -->
 		<img src= ""/>
 		<!-- Cause description -->
 		<p>
-		</p> 
+		${info[1]}
+		</p>
+		<p>Upvotes: ${info[3]}</p>
 		
 		<!-- Form for adding upvote to this post -->
 		<form action="<c:url value="/upvote" />" method="GET">
