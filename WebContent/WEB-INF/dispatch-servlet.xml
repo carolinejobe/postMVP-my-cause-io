@@ -10,10 +10,7 @@
 	http://www.springframework.org/schema/context
 	http://www.springframework.org/schema/context/spring-context.xsd">
 	
-	<context:component-scan base-package="com.testSpring1.controller" />
-	<context:component-scan base-package="com.testSpring1.controller1" />
-	<context:component-scan base-package="com.testSpring1.controller2" />
-	<context:component-scan base-package="com.testSpring1.dbController" />
+	
 	<context:component-scan base-package="io.mycause.controller" />
 	
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">

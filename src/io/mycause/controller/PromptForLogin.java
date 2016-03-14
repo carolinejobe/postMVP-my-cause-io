@@ -7,9 +7,9 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class PromptForLogin {
 
-		@RequestMapping("/login")
-		public ModelAndView promptLogin()
-		{
-			return new ModelAndView("login", "message", "Test message");
-		}
+        @RequestMapping("/login")
+        public ModelAndView promptLogin()
+        {
+            return new ModelAndView("login", "message", "Test message");
+        }
 }

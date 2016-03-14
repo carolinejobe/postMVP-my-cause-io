@@ -8,30 +8,21 @@ import java.sql.PreparedStatement;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 import javax.sql.DataSource;
 
 @Controller
 public class PostCause {
 
 	@RequestMapping("/postcause")
-	public String populateCatMenu() {
-		try {
-			Context ctx = new InitialContext();
-			DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/dbb");
-			Connection conn = ds.getConnection();
+	public String populateCatMenu(HttpServletRequest request) {
+			Cookie[] clientCookies = request.getCookies();
 
-			// error message for line below: "datasource is null" -->
-			// <sql:query dataSource="${myvar}" var="result">
-			// SELECT * from category;
-			// </sql:query>
-			//
-
+			if (clientCookies == null || clientCookies.length == 1) {
+				return "login";
+			}
 			return "postcause";
-		} catch (Exception e) {
-			e.printStackTrace();
-			System.out.println(e.getStackTrace());
-			return "error";
-		}
 	}
 
 }
