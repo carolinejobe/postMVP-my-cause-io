@@ -28,6 +28,7 @@ public class ShowTopPosts {
 			DataSource ds = (DataSource)ctx.lookup("java:comp/env/jdbc/dbb");
 			Connection conn = ds.getConnection(); 
 			
+
 			Statement s =  conn.createStatement();
 			ResultSet results = s.executeQuery("select * from maindb.posts order by upvotes desc limit 10");
 			
@@ -35,15 +36,17 @@ public class ShowTopPosts {
 			
 			while(results.next()) {
 					
-					String postHeadline = results.getString(2);
-					String postDescription = results.getString(3);
-					int postUpvotes = results.getInt(8);
-					Post tempPost = new Post();
-					tempPost.setTitle(postHeadline);
-					tempPost.setDescription(postDescription);
-					tempPost.setPostUpvotes(postUpvotes);
+				int postId = results.getInt(1);
+				String postHeadline = results.getString(2);
+				String postDescription = results.getString(3);
+				int postUpvotes = results.getInt(8);
+				Post tempPost = new Post();
+				tempPost.setTitle(postHeadline);
+				tempPost.setDescription(postDescription);					
+				tempPost.setPostUpvotes(postUpvotes);
+				tempPost.setPostId(postId);
 					
-					topPosts.add(tempPost);
+				topPosts.add(tempPost);
 				
 			}
 			
@@ -52,7 +55,7 @@ public class ShowTopPosts {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			return new ModelAndView("showError","errorMessage", "No posts to show");
+			return new ModelAndView("error","errorMessage", "No posts to show");
 		}
 	}
 }
