@@ -70,11 +70,11 @@
 		<p>Upvotes: ${info[3]}</p>
 		
 		<!-- Form for adding upvote to this post -->
-		<form action="<c:url value="/upvote" />"> method="GET" 
+		<form action="<c:url value="/upvote" />" method="GET" >
 			<button type="button" name="upvote" id="upvote">Upvote!</button>
 		</form>
 		<form action="">
-			<button type="button" name="upvote" id="connect">Connect</button>
+			<button type="button" name="connect" id="connect">Connect</button>
 		</form>
 
 

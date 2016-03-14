@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class UpvoteCause {
 
 	@RequestMapping(value="/upvote", method=RequestMethod.GET)
-	public String upvotePost(@RequestParam String upvote) {
+	public String upvotePost(@RequestParam("postId") int id) {
 
 		try {
 			Context ctx = new InitialContext();
@@ -26,9 +26,8 @@ public class UpvoteCause {
 			// create mySQL insert statement.
 			// --> make syntax below the insertStatement once we have a way to determine
 			// what the post_id is: "update posts set upvotes=upvotes+1 where post_id=X"
-			// also need a row lock to handle multiple users
 			
-			String insertStatement = "UPDATE maindb.posts()";
+			String insertStatement = "UPDATE maindb.posts set upvotes=upvotes+1 where post_id='" + id + "'";
 
 			// create the mySQL insert preparedstatement
 			PreparedStatement insertPreparedStatement = conn.prepareStatement(insertStatement);
