@@ -40,6 +40,7 @@ public class UserLogin {
 
 			{
 				String userid = results.getString(1);
+     			System.out.println(userid);
 				Cookie c = new Cookie("userid", userid);
 
 				response.addCookie(c);
