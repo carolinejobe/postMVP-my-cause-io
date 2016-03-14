@@ -70,12 +70,11 @@
 		<p>Upvotes: ${info[3]}</p>
 		
 		<!-- Form for adding upvote to this post -->
-		<form action="<c:url value="/upvote" />" method="GET" >
-			<button type="button" name="upvote" id="upvote">Upvote!</button>
+		<form action="upvote" name="upvoteform" method=POST>
+			<input type="submit" value="upvote" />
+			<input type="hidden" value = ${info[4]} name="postId"/>
 		</form>
-		<form action="">
-			<button type="button" name="connect" id="connect">Connect</button>
-		</form>
+	
 
 
 	<!-- Facebook like/share buttons -->

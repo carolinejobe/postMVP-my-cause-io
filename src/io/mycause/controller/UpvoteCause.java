@@ -11,11 +11,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 public class UpvoteCause {
 
-	@RequestMapping(value="/upvote", method=RequestMethod.GET)
+	@RequestMapping(value="/upvote")
 	public String upvotePost(@RequestParam("postId") int id) {
 
 		try {
@@ -27,7 +28,7 @@ public class UpvoteCause {
 			// --> make syntax below the insertStatement once we have a way to determine
 			// what the post_id is: "update posts set upvotes=upvotes+1 where post_id=X"
 			
-			String insertStatement = "UPDATE maindb.posts set upvotes=upvotes+1 where post_id='" + id + "'";
+			String insertStatement = "UPDATE maindb.posts set upvotes=upvotes+1 where post_id=" + id ;
 
 			// create the mySQL insert preparedstatement
 			PreparedStatement insertPreparedStatement = conn.prepareStatement(insertStatement);

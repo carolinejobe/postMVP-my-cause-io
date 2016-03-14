@@ -17,7 +17,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class ShowCause {
 	
 	@RequestMapping("/cause")
-	public ModelAndView helloWorld(@RequestParam("postId") String id)
+	public ModelAndView helloWorld(@RequestParam("postId") int id)
 	{
 try {
 			
@@ -28,7 +28,7 @@ try {
 			
 			Statement s = conn.createStatement();
 			ResultSet results = s.executeQuery("select * from maindb.posts where post_id='"+id+"'"); // this line selects
-			String[] postInfo = new String[4];
+			String[] postInfo = new String[5];
 			if ( results.next()) {
 				
 				String postHeadline = results.getString(2);
@@ -40,7 +40,8 @@ try {
 				postInfo[1] = postDescription;
 				postInfo[2] = postCategoryId;
 				postInfo[3] = postUpvotes;
-			
+			    postInfo[4]= Integer.toString(id);
+			    
 				
 			return new ModelAndView("cause", "info", postInfo);
 			}
