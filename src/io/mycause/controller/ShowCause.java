@@ -27,7 +27,7 @@ try {
 			
 			
 			Statement s = conn.createStatement();
-			ResultSet results = s.executeQuery("select * from posts where post_id='"+id+"'"); // this line selects
+			ResultSet results = s.executeQuery("select * from maindb.posts where post_id='"+id+"'"); // this line selects
 			String[] postInfo = new String[4];
 			if ( results.next()) {
 				
