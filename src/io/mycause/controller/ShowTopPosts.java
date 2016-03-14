@@ -29,7 +29,7 @@ public class ShowTopPosts {
 			Connection conn = ds.getConnection(); 
 			
 			Statement s =  conn.createStatement();
-			ResultSet results = s.executeQuery("select * from maindb.posts limit 10");
+			ResultSet results = s.executeQuery("select * from maindb.posts order by upvotes desc limit 10");
 			
 			ArrayList<Post> topPosts = new ArrayList<>();
 			
@@ -37,9 +37,11 @@ public class ShowTopPosts {
 					
 					String postHeadline = results.getString(2);
 					String postDescription = results.getString(3);
+					int postUpvotes = results.getInt(8);
 					Post tempPost = new Post();
 					tempPost.setTitle(postHeadline);
 					tempPost.setDescription(postDescription);
+					tempPost.setPostUpvotes(postUpvotes);
 					
 					topPosts.add(tempPost);
 				
