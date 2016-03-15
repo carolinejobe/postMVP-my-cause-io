@@ -74,6 +74,10 @@
 			<input type="submit" value="upvote" />
 			<input type="hidden" value = ${info[4]} name="postId"/>
 		</form>
+		<form action="connect" method=POST>
+ 			<button type="button" name="upvote" id="connect">connect</button>
+ 			<input id="contact" type="hidden" name="${info[5]}"/>
+ 		</form>
 	
 
 
