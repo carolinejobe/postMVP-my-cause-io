@@ -45,7 +45,7 @@ public class UserLogin {
 
 				response.addCookie(c);
 
-				return new ModelAndView("loginSuccess", "message", "yo");
+				return new ModelAndView("success", "message", "You have successfully logged in!");
 			} else
 			{
 				return new ModelAndView("error", "message", "Error in signin ");
