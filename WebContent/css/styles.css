@@ -2,11 +2,19 @@
 
 /* demo page styles */
 body {
-	background: #eee;
+	background: #ffffff;
 	margin: 0;
 	padding: 0;
 }
-
+.jumbotron {
+    margin-bottom: 0px;
+    background-image: url(../img/jbbackground.png);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.1em;
+}
 #bg {
 	position: fixed;
 	top: 0;
@@ -98,15 +106,6 @@ body {
 	width: 160px;
 }
 
-#nav:hover {
-	height: 200px;
-}
-
-#nav li:hover ul {
-	-moz-transform: translate(0, 161px); /*some css3*/
-	-o-transform: translate(0, 161px);
-	-webkit-transform: translate(0, 161px);
-}
 
 #nav a:hover, #nav li:hover>a {
 	color: #99ff33;
