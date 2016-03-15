@@ -70,6 +70,7 @@
 	<main> <!-- START JUMBOTRON -->
 	<div class="container">
 		<div class="jumbotron">
+			<img alt="" src="${info[6]}">
 			<h1>${info[0]}</h1>
 			<p>${info[1]}</p>
 			<p>Upvotes: ${info[3]}</p>
