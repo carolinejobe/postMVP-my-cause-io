@@ -10,12 +10,13 @@ import javax.sql.DataSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class AddUser {
 
 	@RequestMapping("/profileSuccess")
-	public String addUser(@RequestParam("firstname") String firstname, @RequestParam("lastname") String lastname,
+	public ModelAndView addUser(@RequestParam("firstname") String firstname, @RequestParam("lastname") String lastname,
 			@RequestParam("email") String email, @RequestParam("password") String password, @RequestParam("organization") String organization) {
 		try {
 //			// create connection to mySQL database
@@ -46,12 +47,13 @@ public class AddUser {
 			// execute the preparedstatement
 			insertPreparedStatement.execute();
 
-			return "profileSuccess";
+			return new ModelAndView("success","message","Thanks for creating an account!");
 
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println(e.getStackTrace());
-			return "error";
+			return new ModelAndView("error","message","There was an issue creating your account.");
+
 		}
 	}
 }
