@@ -35,6 +35,7 @@
 			<li><a href="postcause.html">Post Cause</a></li>
 			<li class="active"><a href="login.html">Login</a></li>
 			<li><a href="signup.html">Sign Up</a></li>
+			<li><a href="logout.html">Logout</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -71,6 +72,7 @@
 	
 	<!-- Login form -->
 	<main>
+	<p>${message}</p>
 		<form action="processlogin.html" method="post">
 			Enter your email address: <input type="email" name="email" required/>
 			Enter your password: <input type="password" name="password" required/>
