@@ -28,19 +28,27 @@ try {
 			
 			Statement s = conn.createStatement();
 			ResultSet results = s.executeQuery("select * from maindb.posts where post_id='"+id+"'"); // this line selects
-			String[] postInfo = new String[5];
+			
+			String[] postInfo = new String[6];
 			if ( results.next()) {
 				
 				String postHeadline = results.getString(2);
 				String postDescription = results.getString(3);
 				String postCategoryId = results.getString(4);
 				String postUpvotes = results.getString(8);
+				String userId = results.getString(9);
+				
+				ResultSet result = s.executeQuery("select email from users where user_id = ' "+userId+" '");
+
 				
 				postInfo[0] = postHeadline;
 				postInfo[1] = postDescription;
 				postInfo[2] = postCategoryId;
 				postInfo[3] = postUpvotes;
-			    postInfo[4]= Integer.toString(id);
+			    postInfo[4] = Integer.toString(id);
+			    
+			    if(result.next())
+			    postInfo[5] = result.getString(1);
 			    
 				
 			return new ModelAndView("cause", "info", postInfo);
