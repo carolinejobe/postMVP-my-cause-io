@@ -20,7 +20,6 @@ public class UserLogout {
 			if (clientCookies[1] != null) {
 				clientCookies[1].setMaxAge(0);
 				response.addCookie(clientCookies[1]);
-				System.out.println(clientCookies[1].getMaxAge() + " "+ clientCookies[1].getName());
 				return new ModelAndView("login", "message", "You have successfully logged out");
 			}
 			else{

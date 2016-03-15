@@ -25,57 +25,54 @@ public class ShowTopPosts {
 		try {
 
 			Context ctx = new InitialContext();
-			DataSource ds = (DataSource)ctx.lookup("java:comp/env/jdbc/dbb");
-			Connection conn = ds.getConnection(); 
-			
+			DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/dbb");
+			Connection conn = ds.getConnection();
 
-			Statement s =  conn.createStatement();
+			Statement s = conn.createStatement();
 			ResultSet results = s.executeQuery("select * from maindb.posts order by upvotes desc limit 10");
-			
+
 			ArrayList<Post> topPosts = new ArrayList<>();
-			
-			while(results.next()) {
-					
+
+			while (results.next()) {
+
 				int postId = results.getInt(1);
 				String postHeadline = results.getString(2);
 				String postDescription = results.getString(3);
 				int postUpvotes = results.getInt(8);
 				int catId = results.getInt(4);
-				String imageLink="";
-				
-				switch (catId)
-				{
+				String imageLink = "";
+
+				switch (catId) {
 				case 1:
-					imageLink="images/moneyIconSmall.jpg";
+					imageLink = "images/moneyIconSmall.jpg";
 					break;
 				case 2:
-					imageLink="images/timeIconSmall.jpg";
+					imageLink = "images/timeIconSmall.jpg";
 					break;
-					case 3:
-						imageLink="images/foodIconsmall.jpg";
-						break;
-					case 4:
-						imageLink="images/materialsIconSmall.jpg";
-						break;
-				
+				case 3:
+					imageLink = "images/foodIconsmall.jpg";
+					break;
+				case 4:
+					imageLink = "images/materialsIconSmall.jpg";
+					break;
+
 				}
 				Post tempPost = new Post();
 				tempPost.setTitle(postHeadline);
-				tempPost.setDescription(postDescription);					
+				tempPost.setDescription(postDescription);
 				tempPost.setPostUpvotes(postUpvotes);
 				tempPost.setPostId(postId);
 				tempPost.setCatId(catId);
 				tempPost.setImageLink(imageLink);
 				topPosts.add(tempPost);
-				
+
 			}
-			
-			return new ModelAndView("index","tenPosts",topPosts);
-			
+
+			return new ModelAndView("index", "tenPosts", topPosts);
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			return new ModelAndView("error","errorMessage", "No posts to show");
+			return new ModelAndView("error", "errorMessage", "No posts to show");
 		}
 	}
 }

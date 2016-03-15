@@ -36,6 +36,8 @@ public class UpvoteCause {
 
 			// execute the preparedstatement
 			insertPreparedStatement.execute();
+			
+			//repopulate page with cause info
 			conn = ds.getConnection();
 			Statement s = conn.createStatement();
 			ResultSet results = s.executeQuery("select * from maindb.posts where post_id="+id); // this line selects
