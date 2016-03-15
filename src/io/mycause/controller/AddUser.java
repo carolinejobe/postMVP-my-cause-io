@@ -47,7 +47,7 @@ public class AddUser {
 			// execute the preparedstatement
 			insertPreparedStatement.execute();
 
-			return new ModelAndView("login","message","Thanks for creating an account!");
+			return new ModelAndView("login","message","Thanks for creating an account! Please login.");
 
 		} catch (Exception e) {
 			e.printStackTrace();
