@@ -82,7 +82,7 @@
 	
 	<footer>
 		<p>&copy; All rights reserved by Jeseekia Vaughn, Caroline Jobe,
-			Aaron Ribant, and Mark Day</p>
+			Aaron Ribant</p>
 	</footer>
 	
 	<!-- JQuery -->

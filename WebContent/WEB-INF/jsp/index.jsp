@@ -27,7 +27,7 @@
 		<div class="example">
 			<ul id="nav">
 				<li><a href="index.html">Home</a></li>
-<!-- 				<li><a href="search.html">Search</a></li> -->
+				<!-- 				<li><a href="search.html">Search</a></li> -->
 				<li><a href="postcause.html">Post Cause</a></li>
 				<li><a href="login.html">Login</a></li>
 				<li><a href="signup.html">Sign Up</a></li>
@@ -40,7 +40,6 @@
 			<!-- Begin content block -->
 			<!-- Header for photo -->
 			<header> </header>
-
 			<!-- List of postings based on upvotes -->
 			<main class="container"> <c:forEach var="myvar"
 				items="${tenPosts}">

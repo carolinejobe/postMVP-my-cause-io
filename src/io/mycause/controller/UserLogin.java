@@ -39,15 +39,14 @@ public class UserLogin {
 
 			{
 				String userid = results.getString(1);
-     			System.out.println(userid);
 				Cookie c = new Cookie("userid", userid);
 
 				response.addCookie(c);
 
-				return new ModelAndView("success", "message", "You have successfully logged in!");
+				return new ModelAndView("index", "WelcomeMessage", "You have successfully logged in!");
 			} else
 			{
-				return new ModelAndView("error", "message", "Error in signin ");
+				return new ModelAndView("login", "message", "Looks like we had some trouble signing you in. Please try again.");
 
 			}
 		
