@@ -31,11 +31,12 @@
 				<li><a href="postcause.html">Post Cause</a></li>
 				<li><a href="login.html">Login</a></li>
 				<li><a href="signup.html">Sign Up</a></li>
+				<li><a href="logout.html">Logout</a></li>
 			</ul>
 		</div>
 
 		<!-- Content wrapper; all original content goes inside of this div: -->
-		<div style="position: relative ; z-index: 2;">
+		<div style="position: relative; z-index: 2;">
 			<!-- Begin content block -->
 			<!-- Header for photo -->
 			<header> </header>
