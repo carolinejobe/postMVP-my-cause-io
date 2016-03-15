@@ -12,12 +12,13 @@ import javax.sql.DataSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class AddPostToDB {
 
 	@RequestMapping("/postSuccess")
-	public String addPost(@RequestParam("category") int category, @RequestParam("postheadline") String postheadline,
+	public ModelAndView addPost(@RequestParam("category") int category, @RequestParam("postheadline") String postheadline,
 			@RequestParam("post_desc") String post_desc, HttpServletRequest request) {
 		try {
 			Context ctx = new InitialContext();
@@ -33,7 +34,7 @@ public class AddPostToDB {
 				userID = clientCookies[1].getValue();
 				userIDint = Integer.parseInt(userID);
 			} else {
-				return "login";
+				return new ModelAndView("login", "message", "You must be logged in to create a post.");
 			}
 
 			// create mySQL insert statement.
@@ -51,11 +52,11 @@ public class AddPostToDB {
 			// execute the preparedstatement
 			insertPreparedStatement.execute();
 
-			return "postSuccess";
+			return new ModelAndView ("success", "message", "Your post has been added!");
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			return "error";
+			return new ModelAndView ("error", "message", "Sorry, something happened. Please go back and try again.");
 		}
 	}
 }
