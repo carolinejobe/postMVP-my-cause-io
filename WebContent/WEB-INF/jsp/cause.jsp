@@ -56,6 +56,7 @@
 			<li><a href="postcause.html">Post Cause</a></li>
 			<li><a href="login.html">Login</a></li>
 			<li><a href="signup.html">Sign Up</a></li>
+			<li><a href="logout.html">Logout</a></li>
 		</ul>
 	</nav>
 	
