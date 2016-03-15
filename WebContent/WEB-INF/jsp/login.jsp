@@ -31,7 +31,7 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><a href="index.html">Home</a></li>
-			<li><a href="search.html">Search</a></li>
+<!-- 			<li><a href="search.html">Search</a></li> -->
 			<li><a href="postcause.html">Post Cause</a></li>
 			<li class="active"><a href="login.html">Login</a></li>
 			<li><a href="signup.html">Sign Up</a></li>
