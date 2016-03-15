@@ -10,6 +10,6 @@ public class PromptForLogin {
         @RequestMapping("/login")
         public ModelAndView promptLogin()
         {
-            return new ModelAndView("login", "message", "Test message");
+            return new ModelAndView("login", "message", "");
         }
 }
