@@ -13,6 +13,7 @@
 
 <!-- Site specific styles -->
 <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" type="text/css" href="css/sweetalert.css">
 <title>MyCause.io</title>
 </head>
 
@@ -56,16 +57,28 @@
 	</script>
 
 	<!-- Site Navigation -->
-	<div class="example">
-		<ul id="nav">
-			<li><a href="index.html">Home</a></li>
-<!-- 			<li><a href="search.html">Search</a></li> -->
-			<li><a href="postcause.html">Post Cause</a></li>
-			<li><a href="login.html">Login</a></li>
-			<li><a href="signup.html">Sign Up</a></li>
-			<li><a href="logout.html">Logout</a></li>
-		</ul>
-	</div>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="index.html">MyCause.io</a>
+	        </div>
+	        <div id="navbar" class="collapse navbar-collapse">
+	          <ul class="nav navbar-nav">
+	            <li><a href="#">Home</a></li>
+	            <li><a href="postcause.html">Post My Cause</a></li>
+	            <li><a href="login">Login</a></li>
+	            <li><a href="signup.html">Sign Up</a></li>
+				<li><a href="logout.html">Logout</a></li>
+	          </ul>
+	        </div><!--/.nav-collapse -->
+	      </div>
+	    </nav>
 
 	<main> <!-- START JUMBOTRON -->
 	<div class="container">
@@ -130,5 +143,6 @@
 
 	<!-- Site scripts -->
 	<script src="scripts/scripts.js"></script>
+	<script src="scripts/sweetalert.min.js"></script>
 </body>
 </html>
