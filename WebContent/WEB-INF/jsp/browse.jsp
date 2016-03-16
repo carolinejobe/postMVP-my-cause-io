@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,8 +28,10 @@
 	          <ul class="nav navbar-nav">
 	            <li><a href="index.html">Home</a></li>
 	            <li><a href="postcause.html">Post My Cause</a></li>
-	            <li><a href="login">Login</a></li>
+	            <li><a href="search.html">Search</a></li>
+	            <li class="active"><a href="browse.html">Browse</a></li>
 	            <li><a href="signup.html">Sign Up</a></li>
+	            <li><a href="login">Login</a></li>
 				<li><a href="logout.html">Logout</a></li>
 	          </ul>
 	        </div><!--/.nav-collapse -->
@@ -36,10 +39,10 @@
 	    </nav>
 	
 	
-	<!-- Search Form -->
+	<!-- Browse Form -->
 	<main>
-		<p>Browse</p>
-		<form action="browse.html" method="post">
+		<h2>Browse:</h2>
+		<form action="processBrowse.html" method="post">
 		
 		Select a category:<select name="category">
 			<option value="0">all categories</option>
@@ -47,21 +50,48 @@
 			<option value="2">time</option>
 			<option value="3">food</option>
 			<option value="4">material</option>
-		</select><br>
+		</select>
 		
-			
+		Sort causes by:<select name="sort">
+			<option value="post_id desc">newest first</option>
+			<option value="post_id asc">oldest first</option>
+			<option value="upvotes desc">most upvotes</option>
+			<option value="upvotes asc">fewest upvotes</option>
+		</select><br> 
 			
 			<input type="submit" value="Search"/>
 		</form>
 		
-		<div class="post-preview">
-			<!-- Post preview image -->
-			<img src="#"/>
-			<!-- Post description -->
-			<p></p>
-			<!-- Link to cause page -->
-			<a href="">View this cause</a>
-		</div>
+<!-- 		<div class="post-preview"> -->
+<!-- 			<!-- Post preview image --> 
+<!-- 			<img src="#"/> -->
+<!-- 			<!-- Post description --> 
+<!-- 			<p></p> -->
+<!-- 			<!-- Link to cause page --> 
+<!-- 			<a href="">View this cause</a> -->
+<!-- 		</div> -->
+		
+		<!-- Returned Results -->
+		<div class="container">
+				<c:forEach var="myvar" items="${selectedPosts}">
+				<div class="row">
+					<div class="post-preview">
+							<!-- Post preview image -->
+							<img src="${myvar.getImageLink()}" />
+							<!-- Post title -->
+							<h2>${myvar.getTitle()}</h2>
+							<!-- Post description -->
+							<p>${myvar.getDescription()}</p>
+							<p>Upvotes: ${myvar.getPostUpvotes() }</p>
+							<form action="cause.html">
+								<input type="hidden" name="postId" value="${myvar.getPostId()}" />
+								<input type="hidden" name="catId" value="${myvar.getCatId()}" />
+								<input type="submit" value="visit" name="visit" />
+							</form>
+					</div>
+				</div>
+			</c:forEach> 
+			</div>
 	</main>
 	
 	<footer>

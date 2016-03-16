@@ -72,8 +72,10 @@
 	          <ul class="nav navbar-nav">
 	            <li><a href="#">Home</a></li>
 	            <li><a href="postcause.html">Post My Cause</a></li>
-	            <li><a href="login">Login</a></li>
+	            <li><a href="search.html">Search</a></li>
+	            <li><a href="browse.html">Browse</a></li>
 	            <li><a href="signup.html">Sign Up</a></li>
+	            <li><a href="login">Login</a></li>
 				<li><a href="logout.html">Logout</a></li>
 	          </ul>
 	        </div><!--/.nav-collapse -->
@@ -84,7 +86,8 @@
 	<div class="container">
 		<div class="jumbotron">
 			<img alt="" src="${info[6]}">
-			<h1>${info[0]}</h1>
+			<img src="${info[5]}" />
+			<h1>${info[0]}</h1> 
 			<p>${info[1]}</p>
 			<p>Upvotes: ${info[3]}</p>
 			<!-- Form for adding upvote to this post -->
