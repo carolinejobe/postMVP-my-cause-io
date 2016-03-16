@@ -72,7 +72,7 @@
 	  <div class="form-group">
 	    <label for="inputHeadline" class="col-sm-2 control-label">Headline</label>
 	    <div class="col-sm-8">
-	      <input type="text" name="postHeadline" maxlength="59" class="form-control" id="inputHeadline" placeholder="Enter a title (max 59 characters)" required/>
+	      <input type="text" name="postheadline" maxlength="59" class="form-control" id="inputHeadline" placeholder="Enter a title (max 59 characters)" required/>
 	    </div>
 	  </div>
 	  <div class="form-group">
@@ -99,7 +99,7 @@
 
 	<footer>
 		<p>&copy; All rights reserved by Jeseekia Vaughn, Caroline Jobe,
-			Aaron Ribant, and Mark Day</p>
+			Aaron Ribant</p>
 	</footer>
 
 	<!-- JQuery -->
