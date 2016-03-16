@@ -39,3 +39,13 @@ $( "#connect" ).click(function() {
 		html: true });
 	
 });
+
+$(document).ready(function(){
+	var loginValue = Cookies.get("userid");
+
+	if(loginValue != null) {
+		$(".nav").append(
+			"<li><a href=\"logout.html\">Logout</a></li>"
+		);
+	}
+});
