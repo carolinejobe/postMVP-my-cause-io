@@ -83,17 +83,12 @@ public class SearchResults {
 				tempPost.setCatId(catId);
 				tempPost.setImageLink(imageLink);
 				searchResults.add(tempPost);
-
 			}
-			
-			
 		
 		return new ModelAndView("search", "selectedPosts", searchResults);
 	} catch (Exception e)
 
 	{
-		e.printStackTrace();
-		System.out.println(e.getStackTrace());
 		return new ModelAndView("search", "message",
 				"Your search returned 0 results. Please try another search.");
 
