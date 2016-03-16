@@ -1,5 +1,11 @@
 @CHARSET "UTF-8";
 
+.jumbotron {
+background-image: url("../images/jumbotronbackground.png");
+background-size: cover;
+text-shadow: 2px 3px 5px rgba(255,255,255, 0.9);
+}
+
 body {
   padding-top: 50px;
 }
