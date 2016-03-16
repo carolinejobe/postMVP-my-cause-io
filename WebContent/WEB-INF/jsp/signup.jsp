@@ -38,7 +38,6 @@
 					<li><a href="browse.html">Browse</a></li>
 					<li class="active"><a href="signup.html">Sign Up</a></li>
 					<li><a href="login">Login</a></li>
-					<li><a href="logout.html">Logout</a></li>
 				</ul>
 			</div>
 			<!--/.nav-collapse -->
@@ -48,14 +47,56 @@
 
 	<!-- Signup form -->
 	<main>
-	<form action="profileSuccess.html" method="post">
-		First name: <input type="text" name="firstname" required /> Last name:
-		<input type="text" name="lastname" required /> Organization (if
-		applicable): <input type="text" name="organization" /> Email address:
-		<input type="email" name="email" required /> Enter a password: <input
-			type="password" name="password" required /> <input type="submit"
-			value="Submit" />
-	</form>
+		<div class="container">  
+			<h2 class="page-header">Sign Up</h2>
+			<p class="col-sm-offset-2 col-sm-10">Join our community by making an account so that you can post your causes.</p>
+		</div>
+	
+			<form action="profileSuccess.html" method="post" class="form-horizontal">
+			<div class="container">
+			
+				<div class="form-group">
+				  <label for="firstNameInput" class="col-sm-2 control-label">First Name:</label>
+				  <div class="col-sm-10">
+				    <input type="text" name="firstname" class="form-control" id="firstNameInput" placeholder="Enter your first name." required/>
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label for="lastNameInput" class="col-sm-2 control-label">Last Name:</label>
+				  <div class="col-sm-10">
+				    <input type="text" name="lastname" class="form-control" id="lastNameInput" placeholder="Enter your last name." required/>
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label for="organizationInput" class="col-sm-2 control-label">Organization Name:</label>
+				  <div class="col-sm-10">
+				    <input type="text" name="organization" class="form-control" id="organizationInput" placeholder="Enter your organization if applicable."/>
+				  </div>
+				</div>
+				<div class="form-group">
+			    	<label for="inputEmail" class="col-sm-2 control-label">Email Address: </label>
+			    	<div class="col-sm-10">
+			    		<input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email Address" required/>
+			    	</div>
+			    </div>
+				<div class="form-group">
+				  <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+				  <div class="col-sm-10">
+				    <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Password">
+				  </div>
+				</div>
+				<div class="form-group">
+				  <div class="col-sm-offset-2 col-sm-10">
+				    <button type="submit" value="submit" class="btn btn-default">Join Us!</button>
+				  </div>
+				</div>
+s
+			</form>
+	
+	
+	
+	
+	
 	</main>
 
 	<footer>
@@ -73,6 +114,8 @@
 		integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
 		crossorigin="anonymous"></script>
 
+	<!-- Cookie JS lib scripts -->
+	<script src="scripts/js.cookie.js"></script>
 	<!-- Site scripts -->
 	<script src="scripts/scripts.js"></script>
 </body>

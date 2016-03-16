@@ -43,7 +43,6 @@
 	            <li><a href="browse.html">Browse</a></li>
 	            <li><a href="signup.html">Sign Up</a></li>
 	            <li><a href="login">Login</a></li>
-				<li><a href="logout.html">Logout</a></li>
 	          </ul>
 	        </div><!--/.nav-collapse -->
 	      </div>
@@ -115,6 +114,8 @@
 
 	<!-- Sweet Alert -->
 	<script src="scripts/sweetalert.min.js"></script>
+	<!-- Cookie JS lib scripts -->
+	<script src="scripts/js.cookie.js"></script>
 	<!-- Site scripts -->
 	<script src="scripts/scripts.js"></script>
 	

@@ -36,7 +36,6 @@
 					<li><a href="browse.html">Browse</a></li>
 					<li><a href="signup.html">Sign Up</a></li>
 					<li><a href="login">Login</a></li>
-					<li><a href="logout.html">Logout</a></li>
 				</ul>
 			</div>
 			<!--/.nav-collapse -->
@@ -59,6 +58,8 @@
 		integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
 		crossorigin="anonymous"></script>
 
+	<!-- Cookie JS lib scripts -->
+	<script src="scripts/js.cookie.js"></script>
 	<!-- Site scripts -->
 	<script src="scripts/scripts.js"></script>
 </body>
