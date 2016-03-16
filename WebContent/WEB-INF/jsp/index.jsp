@@ -35,8 +35,10 @@
 	          <ul class="nav navbar-nav">
 	            <li class="active"><a href="index.html">Home</a></li>
 	            <li><a href="postcause.html">Post My Cause</a></li>
-	            <li><a href="login">Login</a></li>
+	            <li><a href="search.html">Search</a></li>
+	            <li><a href="browse.html">Browse</a></li>
 	            <li><a href="signup.html">Sign Up</a></li>
+	            <li><a href="login">Login</a></li>
 				<li><a href="logout.html">Logout</a></li>
 	          </ul>
 	        </div><!--/.nav-collapse -->
