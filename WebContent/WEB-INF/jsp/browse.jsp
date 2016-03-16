@@ -38,9 +38,19 @@
 	
 	<!-- Search Form -->
 	<main>
-		<p>Search for a cause:</p>
-		<form action="" method="post">
-			<input type="text" value="Search by need"/>
+		<p>Browse</p>
+		<form action="browse.html" method="post">
+		
+		Select a category:<select name="category">
+			<option value="0">all categories</option>
+			<option value="1">money</option>
+			<option value="2">time</option>
+			<option value="3">food</option>
+			<option value="4">material</option>
+		</select><br>
+		
+			
+			
 			<input type="submit" value="Search"/>
 		</form>
 		
