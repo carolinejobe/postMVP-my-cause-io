@@ -35,7 +35,7 @@ $( "#connect" ).click(function() {
 	swal({   title: "Send an <small>email</small>!",
 		//text: "A custom <span style="color:#F8BB86">html<span> message.",
 		
-		text: "<a href='mailto:"+email+"'>Send email to "+ newEmail +"</a>",
+		text: "Click to send an email to <a href='mailto:"+email+"'>"+ newEmail +"</a>",
 		html: true });
 	
 });
