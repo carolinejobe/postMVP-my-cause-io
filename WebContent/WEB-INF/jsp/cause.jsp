@@ -100,7 +100,7 @@
 					value=${info[4] } name="postId" />
 			</form>
 			<form action="connect" method=POST>
-				<button type="button" name="upvote" id="connect">connect</button>
+				<button class="btn btn-primary btn-lg" role="button" name="upvote" id="connect">connect</button>
 				<input id="contact" type="hidden" name="${info[5]}" />
 			</form>
 
