@@ -115,6 +115,8 @@
 
 	<!-- Sweet Alert -->
 	<script src="scripts/sweetalert.min.js"></script>
+	<!-- Cookie JS lib scripts -->
+	<script src="scripts/js.cookie.js"></script>
 	<!-- Site scripts -->
 	<script src="scripts/scripts.js"></script>
 	
