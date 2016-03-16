@@ -33,7 +33,6 @@ public class Browse {
 			
 			// create mySQL statements
 			String browseStatement = "select * from maindb.posts where cat_id in (" + category + ") order by " + sort;
-			System.out.println(browseStatement);
 			// create the mySQL insert preparedstatement
 			PreparedStatement browsePreparedStatement = conn.prepareStatement(browseStatement);
 			
