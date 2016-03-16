@@ -7,3 +7,5 @@ target/m2e-wtp/web-resources/META-INF/maven/my-cause-io/my-cause-io/pom.properti
 *.class
 
 WebContent/META-INF/context.xml
+/build/
+/target/

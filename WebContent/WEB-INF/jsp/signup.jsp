@@ -38,7 +38,6 @@
 					<li><a href="browse.html">Browse</a></li>
 					<li class="active"><a href="signup.html">Sign Up</a></li>
 					<li><a href="login">Login</a></li>
-					<li><a href="logout.html">Logout</a></li>
 				</ul>
 			</div>
 			<!--/.nav-collapse -->
