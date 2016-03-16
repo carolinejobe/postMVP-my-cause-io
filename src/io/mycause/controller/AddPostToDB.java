@@ -2,6 +2,8 @@ package io.mycause.controller;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -45,8 +47,15 @@ public class AddPostToDB {
 
 			// execute the preparedstatement
 			insertPreparedStatement.execute();
-
-			return new ModelAndView("success", "message", "Your post has been added!");
+			
+			// get the newly created postID
+			Statement s = conn.createStatement();
+			ResultSet results = s.executeQuery("select last_insert_id() from maindb.posts");
+			String postID = "";
+			if (results.next()) {
+				postID = results.getString(1);
+			}
+			return new ModelAndView("redirect:/cause.html?postId="+ postID);
 
 		} catch (Exception e) {
 			e.printStackTrace();
