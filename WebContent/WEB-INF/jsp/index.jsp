@@ -62,9 +62,9 @@
 						alt="First slide">
 					<div class="container">
 						<div class="carousel-caption">
-							<h1>Look Around</h1>
+							<h1>Find Your Cause</h1>
 							<p>
-								Everywhere around us are people in need. Reach out and help someone.
+								Give your time, your money, or just your encouragement.
 							</p>
 							<p>
 								<a class="btn btn-lg btn-primary" href="browse.html" role="button">Browse</a>
@@ -80,7 +80,7 @@
 						<div class="carousel-caption">
 							<h1>Give Back</h1>
 							<p>
-							There are many ways to give, who can you help today?
+							There are many ways to give, whose cause will you support today?
 							</p>
 							<p>
 								<a class="btn btn-lg btn-primary" href="signup.html" role="button">Sign up</a>
