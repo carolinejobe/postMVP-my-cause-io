@@ -31,5 +31,11 @@ $( "#connect" ).click(function() {
 	}
 	
 	
-	alert("Email "+ newEmail + " to connect to this cause");
+	//alert("Email "+ newEmail + " to connect to this cause");
+	swal({   title: "Send an <small>email</small>!",
+		//text: "A custom <span style="color:#F8BB86">html<span> message.",
+		
+		text: "<a href='mailto:"+email+"'>Send email to "+ newEmail +"</a>",
+		html: true });
+	
 });
