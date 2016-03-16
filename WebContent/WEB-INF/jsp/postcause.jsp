@@ -48,31 +48,54 @@
 	        </div><!--/.nav-collapse -->
 	      </div>
 	    </nav>
-	<a href="imageofRecipient.jpg"></a>
-	<p>Please describe what kind of assistance you are in need of.</p>
+	
+	<main> 
+	<div class="container">  
 
-
-
-	<form action="postSuccess.html" method="POST">
-		<%-- 		<select name="category"><c:forEach var="row" --%>
-		<%-- 				items="${result.rows}"> --%>
-		<%-- 				<option value='<c:out value="${row.name}"/>'> --%>
-		<%-- 					<c:out value="${row.name}" /> --%>
-		<!-- 				</option> -->
-		<%-- 			</c:forEach> --%>
-		<!-- 		</select> -->
-
-	Select a category:<select name="category">
-			<option value="1">money</option>
-			<option value="2">time</option>
-			<option value="3">food</option>
-			<option value="4">material</option>
-		</select><br>
-		
-	Enter a headline:<input type="text" name="postheadline" maxlength="59" required></input><br>
-	Enter a description:<input type="text" name="post_desc" maxlength="249" required></input><br>
-		<button type="submit" form="form1" value="Submit">Submit</button>
+	<h2 class="page-header">Post Your Cause</h2>
+	<p class="col-sm-offset-2 col-sm-10">Tell us more about your cause.</p>
+	</div> 
+	<form action="postSuccess.html" method="post" class="form-horizontal">
+	<div class="container">
+		<div class="form-group">
+			<label for="categorySelect" class="col-sm-2 control-label">Category</label>
+			<div class="col-sm-8">
+				<select name="category" class="form-control col-sm-2">
+			  		<option value="1">money</option>
+			  		<option value="2">time</option>
+			  		<option value="3">food</option>
+			  		<option value="4">material</option>
+				</select>
+			</div>	
+		</div>
+	
+	  <div class="form-group">
+	    <label for="inputHeadline" class="col-sm-2 control-label">Headline</label>
+	    <div class="col-sm-8">
+	      <input type="text" name="postHeadline" maxlength="59" class="form-control" id="inputHeadline" placeholder="Enter a title (max 59 characters)" required/>
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label for="inputDescription" class="col-sm-2 control-label">Description</label>
+	    <div class="col-sm-8">
+	      	<!-- <input type="text" name=post_desc class="form-control" id="inputDescription" placeholder="Enter a description of your cause (max 249 characters)" required/> -->
+			<textarea name="post_desc" maxlength="249" id="inputDescription" placeholder="Enter a description of your cause (max 249 characters)" class="form-control" rows="3" required/></textarea>
+	    </div>
+	  </div>
+	  
+	  <div class="form-group">
+	    <div class="col-sm-offset-2 col-sm-10">
+	      <button type="submit" form="form1" value="Submit" class="btn btn-default">Submit</button>
+	    </div>
+	  </div>
+	  </div>
 	</form>
+	
+	</main>
+	
+	
+	
+	
 
 	<footer>
 		<p>&copy; All rights reserved by Jeseekia Vaughn, Caroline Jobe,
