@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,20 +41,45 @@
 	
 	<!-- Search Form -->
 	<main>
-		<p>Search for a cause:</p>
-		<form action="" method="post">
-			<input type="text" value="Search by need"/>
+		<h2>Search for a cause:</h2>
+		<form action="processSearch" method="post">
+			<input type="text" name="searchTerm"/>
 			<input type="submit" value="Search"/>
 		</form>
 		
-		<div class="post-preview">
-			<!-- Post preview image -->
-			<img src="#"/>
-			<!-- Post description -->
-			<p></p>
-			<!-- Link to cause page -->
-			<a href="">View this cause</a>
-		</div>
+<!-- 		<div class="post-preview"> -->
+<!-- 			<!-- Post preview image --> 
+<!-- 			<img src="#"/> -->
+<!-- 			<!-- Post description --> 
+<!-- 			<p></p> -->
+<!-- 			<!-- Link to cause page --> 
+<!-- 			<a href="">View this cause</a> -->
+<!-- 		</div> -->
+
+<!-- Returned Results -->
+		<div class="container">
+				<c:forEach var="myvar" items="${selectedPosts}">
+				<div class="row">
+					<div class="post-preview">
+							<!-- Post preview image -->
+							<img src="${myvar.getImageLink()}" />
+							<!-- Post title -->
+							<h2>${myvar.getTitle()}</h2>
+							<!-- Post description -->
+							<p>${myvar.getDescription()}</p>
+							<p>Upvotes: ${myvar.getPostUpvotes() }</p>
+							<form action="cause.html">
+								<input type="hidden" name="postId" value="${myvar.getPostId()}" />
+								<input type="hidden" name="catId" value="${myvar.getCatId()}" />
+								<input type="submit" value="visit" name="visit" />
+							</form>
+					</div>
+				</div>
+			</c:forEach> 
+			</div>
+
+
+
 	</main>
 	
 	<footer>

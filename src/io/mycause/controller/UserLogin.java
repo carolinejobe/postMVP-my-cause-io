@@ -46,7 +46,7 @@ public class UserLogin {
 				return new ModelAndView("index", "WelcomeMessage", "You have successfully logged in!");
 			} else
 			{
-				return new ModelAndView("login", "message", "Looks like we had some trouble signing you in. Please try again.");
+				return new ModelAndView("login", "message", "Invalid username/password. Please try again.");
 
 			}
 		
