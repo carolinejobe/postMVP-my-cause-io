@@ -21,23 +21,29 @@
 
 	<!-- jdbc code needed to communicate user entries to db. -->
 	<!-- Facebook share JS SDK -->
+	<div id="fb-root"></div>
 	<script>
-		window.fbAsyncInit = function() {
-			FB.init({
-				appId : '1542145579413377',
-				xfbml : true,
-				version : 'v2.5'
-			});
-		};
-
 		(function(d, s, id) {
 			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) {
+			if (d.getElementById(id))
 				return;
-			}
 			js = d.createElement(s);
 			js.id = id;
-			js.src = "//connect.facebook.net/en_US/sdk.js";
+			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+
+	<!-- Facebook like js SDK -->
+	<div id="fb-root"></div>
+	<script>
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id))
+				return;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
 			fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
@@ -82,16 +88,12 @@
 			<!--/.nav-collapse -->
 		</div>
 	</nav>
-	<header>
-		
-
-
-	</header>
+	<header> </header>
 	<main> <!-- START JUMBOTRON -->
 	<div class="container">
 		<div class="jumbotron">
 			<img alt="" src="${info[6]}">
-			<h1>${info[0]}</h1> 
+			<h1>${info[0]}</h1>
 			<p>${info[1]}</p>
 			<p>Upvotes: ${info[3]}</p>
 			<!-- Form for adding upvote to this post -->
@@ -100,17 +102,17 @@
 					value=${info[4] } name="postId" />
 			</form>
 			<form action="connect" method=POST>
-				<button class="btn btn-primary btn-lg" role="button" name="upvote" id="connect">connect</button>
+				<button class="btn btn-primary btn-lg" role="button" name="upvote"
+					id="connect">connect</button>
 				<input id="contact" type="hidden" name="${info[5]}" />
 			</form>
 
 			<!-- Facebook like/share buttons -->
-			<div class="fb-like" data-href="http://www.mycause.io"
-				data-layout="standard" data-action="like" data-show-faces="true"
-				data-share="true"></div>
-			<div class="fb-share-button" data-href="http://www.mycause.io"
-				data-layout="icon_link"></div>
-			<br>
+			<div class="fb-share-button" data-href="https://www.mycause.io"
+				data-layout="button"></div>
+			<div class="fb-like" data-href="https://mycause.io"
+				data-layout="standard" data-action="like" data-show-faces="false"
+				data-share="false"></div>
 
 			<!-- Twitter button -->
 			<a href="https://twitter.com/share" class="twitter-share-button"
