@@ -41,27 +41,40 @@ public class UpvoteCause {
 			conn = ds.getConnection();
 			Statement s = conn.createStatement();
 			ResultSet results = s.executeQuery("select * from maindb.posts where post_id="+id); // this line selects
-			String[] postInfo = new String[5];
+			String[] postInfo = new String[6];
 		
 			results.next();
 				String postHeadline = results.getString(2);
 				String postDescription = results.getString(3);
 				String postCategoryId = results.getString(4);
 				String postUpvotes = results.getString(8);
+				int catId = results.getInt(4);
+				String imageLink = "";
+
+				switch (catId) {
+				case 1:
+					imageLink = "images/moneyIconSmall.jpg";
+					break;
+				case 2:
+					imageLink = "images/timeIconSmall.jpg";
+					break;
+				case 3:
+					imageLink = "images/foodIconsmall.jpg";
+					break;
+				case 4:
+					imageLink = "images/materialsIconSmall.jpg";
+					break;
+				}	
 				
-				postInfo[0] = postHeadline;
-				postInfo[1] = postDescription;
-				postInfo[2] = postCategoryId;
-				postInfo[3] = postUpvotes;
-			    postInfo[4]= Integer.toString(id);
-			    
-				
+					postInfo[0] = postHeadline;
+					postInfo[1] = postDescription;
+					postInfo[2] = postCategoryId;
+					postInfo[3] = postUpvotes;
+					postInfo[4] = Integer.toString(id);
+					postInfo[5] = imageLink;
+					
 			return new ModelAndView("cause", "info", postInfo);
 			
-			
-
-			
-
 		} catch (Exception e) {
 			e.printStackTrace();
 			return new ModelAndView ("error", "message", e.getMessage());
