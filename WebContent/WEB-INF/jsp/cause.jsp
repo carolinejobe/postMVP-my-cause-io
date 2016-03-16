@@ -111,7 +111,7 @@
 				</div>
 				<div class="item">
 					<img class="second-slide"
-						src="data:image/banner2.png"
+						src="images/banner2.png"
 						alt="Second slide">
 					<div class="container">
 						<div class="carousel-caption">
@@ -127,17 +127,14 @@
 				</div>
 				<div class="item">
 					<img class="third-slide"
-						src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+						src="images/banner3.png"
 						alt="Third slide">
 					<div class="container">
 						<div class="carousel-caption">
-							<h1>One more for good measure.</h1>
-							<p>Cras justo odio, dapibus ac facilisis in, egestas eget
-								quam. Donec id elit non mi porta gravida at eget metus. Nullam
-								id dolor id nibh ultricies vehicula ut id elit.</p>
+							<h1>Now Is The Time</h1>
+							<p>Take action. Make a difference.</p>
 							<p>
-								<a class="btn btn-lg btn-primary" href="#" role="button">Browse
-									gallery</a>
+								<a class="btn btn-lg btn-primary" href="Search.html" role="button">Search</a>
 							</p>
 						</div>
 					</div>
