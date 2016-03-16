@@ -25,9 +25,9 @@ public class ShowCause {
 			Connection conn = ds.getConnection();
 
 			Statement s = conn.createStatement();
-			ResultSet results = s.executeQuery("select * from maindb.posts where post_id='" + id + "'"); // this
-																											// line
-																											// selects
+			
+			//query to return selected post
+			ResultSet results = s.executeQuery("select * from maindb.posts where post_id='" + id + "'"); 
 
 			String[] postInfo = new String[7];
 			if (results.next()) {
@@ -74,14 +74,13 @@ public class ShowCause {
 			}
 
 			else
-				new ModelAndView("error", "message", "Post not found");
+				return new ModelAndView("error", "message", "Post not found");
 
 		} catch (Exception e) {
 			e.printStackTrace();
 
-			return new ModelAndView("error", "errorMessage", e.getMessage());
+			return new ModelAndView("error", "errorMessage", "Sorry, we couldn't find that post! Please try again.");
 		}
-		return new ModelAndView("cause", "message", "Test Cause Message");
 	}
 
 }

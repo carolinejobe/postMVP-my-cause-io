@@ -41,16 +41,20 @@ public class UpvoteCause {
 			conn = ds.getConnection();
 			Statement s = conn.createStatement();
 			ResultSet results = s.executeQuery("select * from maindb.posts where post_id="+id); // this line selects
-			String[] postInfo = new String[6];
+			String[] postInfo = new String[7];
 		
 			results.next();
 				String postHeadline = results.getString(2);
 				String postDescription = results.getString(3);
 				String postCategoryId = results.getString(4);
 				String postUpvotes = results.getString(8);
+				String userId = results.getString(9);
 				int catId = results.getInt(4);
 				String imageLink = "";
 
+				//retrieve email from database
+				ResultSet result = s.executeQuery("select email from maindb.users where user_id = ' " + userId + " '");
+				
 				switch (catId) {
 				case 1:
 					imageLink = "images/moneyIconSmall.jpg";
@@ -71,7 +75,10 @@ public class UpvoteCause {
 					postInfo[2] = postCategoryId;
 					postInfo[3] = postUpvotes;
 					postInfo[4] = Integer.toString(id);
-					postInfo[5] = imageLink;
+					postInfo[6] = imageLink;
+					
+					if (result.next())
+						postInfo[5] = result.getString(1);
 					
 			return new ModelAndView("cause", "info", postInfo);
 			
