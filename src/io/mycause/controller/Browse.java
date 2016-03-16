@@ -1,12 +1,12 @@
 package io.mycause.controller;
 
 import java.sql.Connection;
-import java.sql.SQLException;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
-import javax.naming.NamingException;
-import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
 import org.springframework.stereotype.Controller;
@@ -17,13 +17,75 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class Browse {
 
-	
 	@RequestMapping("/processBrowse")
-	public ModelAndView processBrowse(@RequestParam("email") String email, @RequestParam("password") String password){
-		
+	public ModelAndView processBrowse(@RequestParam("category") String category, @RequestParam("sort") String sort) {
 
+		try {
+			
+			//connect to database
 			Context ctx = new InitialContext();
 			DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/dbb");
 			Connection conn = ds.getConnection();
-}
+			
+			if(category.equals("0")){
+				category="1,2,3,4";
+			}
+			
+			// create mySQL statements
+			String browseStatement = "select * from maindb.posts where cat_id in (" + category + ") order by " + sort;
+			System.out.println(browseStatement);
+			// create the mySQL insert preparedstatement
+			PreparedStatement browsePreparedStatement = conn.prepareStatement(browseStatement);
+			
+			// execute the preparedstatement
+			ResultSet results = browsePreparedStatement.executeQuery();
+			
+			ArrayList<Post> browsePosts = new ArrayList<>();
+			
+			while (results.next()) {
+
+				int postId = results.getInt(1);
+				String postHeadline = results.getString(2);
+				String postDescription = results.getString(3);
+				int postUpvotes = results.getInt(8);
+				int catId = results.getInt(4);
+				String imageLink = "";
+
+				switch (catId) {
+				case 1:
+					imageLink = "images/moneyIconSmall.jpg";
+					break;
+				case 2:
+					imageLink = "images/timeIconSmall.jpg";
+					break;
+				case 3:
+					imageLink = "images/foodIconsmall.jpg";
+					break;
+				case 4:
+					imageLink = "images/materialsIconSmall.jpg";
+					break;
+
+				}
+				Post tempPost = new Post();
+				tempPost.setTitle(postHeadline);
+				tempPost.setDescription(postDescription);
+				tempPost.setPostUpvotes(postUpvotes);
+				tempPost.setPostId(postId);
+				tempPost.setCatId(catId);
+				tempPost.setImageLink(imageLink);
+				browsePosts.add(tempPost);
+
+			}
+
+			return new ModelAndView("browse", "selectedPosts", browsePosts);
+		} catch (Exception e)
+
+		{
+			e.printStackTrace();
+			System.out.println(e.getStackTrace());
+			return new ModelAndView("browse", "message",
+					"There was an issue processing your request. Please try again.");
+
+		}
+	}
 }
