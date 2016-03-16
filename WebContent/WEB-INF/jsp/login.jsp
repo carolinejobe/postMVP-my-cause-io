@@ -32,7 +32,7 @@
           <ul class="nav navbar-nav">
             <li><a href="index.html">Home</a></li>
 <!-- 			<li><a href="search.html">Search</a></li> -->
-			<li><a href="postcause.html">Post Cause</a></li>
+			<li><a href="postcause.html">Post My Cause</a></li>
 			<li class="active"><a href="login.html">Login</a></li>
 			<li><a href="signup.html">Sign Up</a></li>
 			<li><a href="logout.html">Logout</a></li>
@@ -41,48 +41,24 @@
       </div>
     </nav>
     	<!-- --------------------------- END SITE NAVIGATION BAR ------------------------ -->
-    
-    
-    <!-- ------------------------------ START PANEL ADDED FOR SPACING ------------------ -->
-    
-    <div class="panel panel-default">
-  <div class="panel-body">
-    Basic panel example
-  </div>
-</div>
-
-    <!-- ------------------------------ END PANEL ADDED FOR SPACING ------------------ -->
-	
-	    <!-- ------------------------------ START COOKIE TEST CODE ------------------ -->
-	    
-<%-- 	    <% 
-// 		Cookie[] clientCookies = request.getCookies();
-// 		if (clientCookies == null) {
-// 			out.println("No cookie");
-// 		} else if(clientCookies != null){
-// 			out.println("cookie detected");
-// // CODE TO SEND TO ANOTHER PAGE	response.sendRedirect("profileSuccess.html");
-// 		}else{
-// 			out.println("what the hell...");
-// 		}
-<%-- 	    %> --%>
-	    <!-- ------------------------------ END COOKIE TEST CODE ------------------ -->
-	
-	
 	
 	<!-- Login form -->
 	<main>
-	<p>${message}</p>
-		<form action="processlogin.html" method="post">
-			Enter your email address: <input type="email" name="email" required/>
-			Enter your password: <input type="password" name="password" required/>
-			<input type="submit" value="Login"/>
-		</form>
+		<div class="container">
+			<p>${message}</p>
+				<form action="processlogin.html" method="post">
+					Enter your email address: <input type="email" name="email" required/>
+					Enter your password: <input type="password" name="password" required/>
+					<input type="submit" value="Login"/>
+				</form>
+		</div>
 	</main>
 	
 	<footer>
-		<p>&copy; All rights reserved by Jeseekia Vaughn, Caroline Jobe,
+		<div class="container">
+			<p>&copy; All rights reserved by Jeseekia Vaughn, Caroline Jobe,
 			Aaron Ribant</p>
+		</div>
 	</footer>
 	
 	<!-- JQuery -->
