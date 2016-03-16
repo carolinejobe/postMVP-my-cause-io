@@ -90,7 +90,7 @@ public class SearchResults {
 
 	{
 		return new ModelAndView("search", "message",
-				"Your search returned 0 results. Please try another search.");
+				"Your search returned 0 results. Please try another search. (Hint: try searching only one search term.)");
 
 	}
 }
