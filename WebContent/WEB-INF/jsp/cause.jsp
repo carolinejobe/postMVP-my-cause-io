@@ -58,30 +58,105 @@
 
 	<!-- Site Navigation -->
 	<nav class="navbar navbar-inverse navbar-fixed-top">
-	      <div class="container">
-	        <div class="navbar-header">
-	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-	            <span class="sr-only">Toggle navigation</span>
-	            <span class="icon-bar"></span>
-	            <span class="icon-bar"></span>
-	            <span class="icon-bar"></span>
-	          </button>
-	          <a class="navbar-brand" href="index.html">MyCause.io</a>
-	        </div>
-	        <div id="navbar" class="collapse navbar-collapse">
-	          <ul class="nav navbar-nav">
-	            <li><a href="#">Home</a></li>
-	            <li><a href="postcause.html">Post My Cause</a></li>
-	            <li><a href="search.html">Search</a></li>
-	            <li><a href="browse.html">Browse</a></li>
-	            <li><a href="signup.html">Sign Up</a></li>
-	            <li><a href="login">Login</a></li>
-				<li><a href="logout.html">Logout</a></li>
-	          </ul>
-	        </div><!--/.nav-collapse -->
-	      </div>
-	    </nav>
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">MyCause.io</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="#">Home</a></li>
+					<li><a href="postcause.html">Post My Cause</a></li>
+					<li><a href="search.html">Search</a></li>
+					<li><a href="browse.html">Browse</a></li>
+					<li><a href="signup.html">Sign Up</a></li>
+					<li><a href="login">Login</a></li>
+					<li><a href="logout.html">Logout</a></li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</nav>
+	<header>
+		<!-- Carousel ================================================== -->
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol>
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<img class="first-slide" src="images/banner1.png"
+						alt="First slide">
+					<div class="container">
+						<div class="carousel-caption">
+							<h1>Look Around</h1>
+							<p>
+								Everywhere around us are people in need. Reach out and help someone.
+							</p>
+							<p>
+								<a class="btn btn-lg btn-primary" href="signup.html" role="button">Sign
+									up today</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<img class="second-slide"
+						src="data:image/banner2.png"
+						alt="Second slide">
+					<div class="container">
+						<div class="carousel-caption">
+							<h1>Give Back</h1>
+							<p>
+							There are many ways to give, who can you help today?
+							</p>
+							<p>
+								<a class="btn btn-lg btn-primary" href="browse.html" role="button">Browse</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<img class="third-slide"
+						src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+						alt="Third slide">
+					<div class="container">
+						<div class="carousel-caption">
+							<h1>One more for good measure.</h1>
+							<p>Cras justo odio, dapibus ac facilisis in, egestas eget
+								quam. Donec id elit non mi porta gravida at eget metus. Nullam
+								id dolor id nibh ultricies vehicula ut id elit.</p>
+							<p>
+								<a class="btn btn-lg btn-primary" href="#" role="button">Browse
+									gallery</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a class="left carousel-control" href="#myCarousel" role="button"
+				data-slide="prev"> <span
+				class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a> <a class="right carousel-control" href="#myCarousel" role="button"
+				data-slide="next"> <span
+				class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+		<!-- /.carousel -->
 
+
+	</header>
 	<main> <!-- START JUMBOTRON -->
 	<div class="container">
 		<div class="jumbotron">
@@ -109,7 +184,8 @@
 
 			<!-- Twitter button -->
 			<a href="https://twitter.com/share" class="twitter-share-button"
-				data-text="Check out this great cause on mycause.io!" data-size="large">Tweet</a>
+				data-text="Check out this great cause on mycause.io!"
+				data-size="large">Tweet</a>
 			<script>
 				!function(d, s, id) {
 					var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/
@@ -122,11 +198,12 @@
 					}
 				}(document, 'script', 'twitter-wjs');
 			</script>
-	<footer>
-		<p>&copy; All rights reserved by Jeseekia Vaughn, Caroline Jobe,
-			Aaron Ribant</p>
-	</footer> </main>
-		</div>
+			<footer>
+				<p>&copy; All rights reserved by Jeseekia Vaughn, Caroline Jobe,
+					Aaron Ribant</p>
+			</footer>
+	</main>
+	</div>
 	</div>
 
 
