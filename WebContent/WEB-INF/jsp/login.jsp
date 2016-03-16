@@ -47,7 +47,7 @@
 		<div class="container">
 			<p>${message}</p>
 			<h2 class="page-header">Login</h2>
-			<p class="col-sm-offset-2 col-sm-10">Login.</p>
+			<p class="col-sm-offset-2 col-sm-10">Please enter your email address and password.</p>
 		</div>	
 		
 			
