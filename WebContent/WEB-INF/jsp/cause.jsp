@@ -102,7 +102,7 @@
 					<!-- Form for adding upvote to this post -->
 					<form action="upvote" name="upvoteform" method=POST>
 						<!-- <input type="submit" value="upvote" />  -->
-						<button class="btn btn-success btn-lg" value="submit" type="submit" name="upvote">upvote</button>
+						<button class="btn btn-success btn-lg" value="submit" type="submit" name="upvote">upvote </button>
 						<input type="hidden" value=${info[4] } name="postId" />
 					</form>
 				</div>
