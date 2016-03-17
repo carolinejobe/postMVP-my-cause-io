@@ -57,16 +57,16 @@ public class UpvoteCause {
 				
 				switch (catId) {
 				case 1:
-					imageLink = "images/moneyIconSmall.jpg";
+					imageLink = "images/moneyIconSmall.png";
 					break;
 				case 2:
-					imageLink = "images/timeIconSmall.jpg";
+					imageLink = "images/timeIconSmall.png";
 					break;
 				case 3:
-					imageLink = "images/foodIconsmall.jpg";
+					imageLink = "images/foodIconSmall.png";
 					break;
 				case 4:
-					imageLink = "images/materialsIconSmall.jpg";
+					imageLink = "images/materialsIconSmall.png";
 					break;
 				}	
 				
