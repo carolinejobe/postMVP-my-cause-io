@@ -67,7 +67,7 @@ public class ShowTopPosts {
 				topPosts.add(tempPost);
 
 			}
-
+			conn.close();
 			return new ModelAndView("index", "ninePosts", topPosts);
 
 		} catch (Exception e) {

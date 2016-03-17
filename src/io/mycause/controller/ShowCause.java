@@ -69,11 +69,11 @@ public class ShowCause {
 
 				if (result.next())
 					postInfo[5] = result.getString(1);
-
+				conn.close();
 				return new ModelAndView("cause", "info", postInfo);
 			}
-
 			else
+				conn.close();
 				return new ModelAndView("error", "message", "Post not found");
 
 		} catch (Exception e) {

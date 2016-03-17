@@ -84,7 +84,7 @@ public class SearchResults {
 				tempPost.setImageLink(imageLink);
 				searchResults.add(tempPost);
 			}
-		
+		conn.close();
 		return new ModelAndView("search", "selectedPosts", searchResults);
 	} catch (Exception e)
 

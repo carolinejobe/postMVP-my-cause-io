@@ -75,7 +75,7 @@ public class Browse {
 				browsePosts.add(tempPost);
 
 			}
-
+			conn.close();
 			return new ModelAndView("browse", "selectedPosts", browsePosts);
 		} catch (Exception e)
 

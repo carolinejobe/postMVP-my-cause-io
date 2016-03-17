@@ -47,6 +47,7 @@ public class AddUser {
 			// execute the preparedstatement
 			insertPreparedStatement.execute();
 
+			conn.close();
 			return new ModelAndView("login","message","Thanks for creating an account! Please login.");
 
 		} catch (Exception e) {
