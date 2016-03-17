@@ -93,19 +93,25 @@
 		<div class="container">
 				<c:forEach var="myvar" items="${selectedPosts}">
 				<div class="row">
-					<div class="post-preview">
-							<!-- Post preview image -->
-							<img src="${myvar.getImageLink()}" />
-							<!-- Post title -->
-							<h2>${myvar.getTitle()}</h2>
-							<!-- Post description -->
-							<p>${myvar.getDescription()}</p>
-							<p>Upvotes: ${myvar.getPostUpvotes() }</p>
-							<form action="cause.html">
-								<input type="hidden" name="postId" value="${myvar.getPostId()}" />
-								<input type="hidden" name="catId" value="${myvar.getCatId()}" />
-								<input type="submit" value="visit" name="visit" />
-							</form>
+					<div class="panel panel-default">
+						<div class="post-preview">
+							<div class="panel-heading">
+								<!-- Post preview image -->
+								<img src="${myvar.getImageLink()}" />
+								<!-- Post title -->
+								<h2>${myvar.getTitle()}</h2>
+							</div>
+							<div class="panel-body">
+								<!-- Post description -->
+								<p>${myvar.getDescription()}</p>
+								<p>Upvotes: ${myvar.getPostUpvotes() }</p>
+								<form action="cause.html">
+									<input type="hidden" name="postId" value="${myvar.getPostId()}" />
+									<input type="hidden" name="catId" value="${myvar.getCatId()}" />
+									<input type="submit" value="visit" name="visit" />
+								</form>
+							</div>
+						</div>
 					</div>
 				</div>
 			</c:forEach> 
