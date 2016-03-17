@@ -149,7 +149,7 @@
 				
 					
 					<div class="row">
-						<c:forEach var="myvar" items="${ninePosts}" begin="0" end="2">
+						<c:forEach var="myvar" items="${ninePosts}" begin="3" end="5">
 							<div class="col-md-4">
 								<div class="panel panel-default">
 									<div class="top-post-preview">
@@ -177,7 +177,7 @@
 					
 					
 					<div class="row">
-						<c:forEach var="myvar" items="${ninePosts}" begin="0" end="2">
+						<c:forEach var="myvar" items="${ninePosts}" begin="6" end="8">
 							<div class="col-md-4">
 								<div class="panel panel-default">
 									<div class="top-post-preview">
