@@ -130,17 +130,20 @@
 					}
 				}(document, 'script', 'twitter-wjs');
 			</script>
-			<footer>
-				<p>&copy; All rights reserved by Jeseekia Vaughn, Caroline Jobe,
-					Aaron Ribant</p>
-			</footer>
-	</main>
+			
 	</div>
 	</div>
-
-
-
 	<!-- END JUMBOTRON -->
+	</main>
+	
+	<footer>
+		<div class="container">
+			<p>&copy; All rights reserved by Jeseekia Vaughn, Caroline Jobe, and Aaron Ribant.</p>
+		</div>
+	</footer>
+
+
+
 
 	<!-- JQuery -->
 	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>

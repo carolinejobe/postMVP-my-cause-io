@@ -149,9 +149,8 @@
 
 	<footer>
 		<div class="container">
-		<p>&copy; All rights reserved by Jeseekia Vaughn, Caroline Jobe,
-			Aaron Ribant.</p>
-			</div>
+			<p>&copy; All rights reserved by Jeseekia Vaughn, Caroline Jobe, and Aaron Ribant.</p>
+		</div>
 	</footer>
 
 	<!-- JQuery -->
