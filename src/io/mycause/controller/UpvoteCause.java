@@ -66,7 +66,7 @@ public class UpvoteCause {
 					imageLink = "images/foodIconSmall.png";
 					break;
 				case 4:
-					imageLink = "images/materialsIconSmall.png";
+					imageLink = "images/resourcesIconSmall.png";
 					break;
 				}	
 				
