@@ -90,7 +90,7 @@
 				    <button type="submit" value="submit" class="btn btn-default">Join Us!</button>
 				  </div>
 				</div>
-s
+
 			</form>
 	
 	
