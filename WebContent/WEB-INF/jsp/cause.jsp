@@ -96,27 +96,44 @@
 			<h1>${info[0]}</h1>
 			<p>${info[1]}</p>
 			<p>Upvotes: ${info[3]}</p>
-			<!-- Form for adding upvote to this post -->
-			<form action="upvote" name="upvoteform" method=POST>
-				<input type="submit" value="upvote" /> <input type="hidden"
-					value=${info[4] } name="postId" />
-			</form>
-			<form action="connect" method=POST>
-				<button class="btn btn-primary btn-lg" type="button" name="upvote" id="connect">connect</button>
-				<input id="contact" type="hidden" name="${info[5]}" />
-			</form>
-
+			
+			<div class="row">
+				<div class="col-sm-offset-4 col-sm-2">
+					<!-- Form for adding upvote to this post -->
+					<form action="upvote" name="upvoteform" method=POST>
+						<!-- <input type="submit" value="upvote" />  -->
+						<button class="btn btn-success btn-lg" value="submit" type="submit" name="upvote">upvote</button>
+						<input type="hidden" value=${info[4] } name="postId" />
+					</form>
+				</div>
+				<div class="col-sm-2">
+					<form action="connect" method=POST>
+						<button class="btn btn-success btn-lg" type="button" name="upvote" id="connect">connect</button>
+						<input id="contact" type="hidden" name="${info[5]}" />
+					</form>
+				</div>
+			</div>
+			<br/>
 			<!-- Facebook like/share buttons -->
-			<div class="fb-share-button" data-href="https://www.mycause.io"
+			
+			<div class="row">
+				<div class="fb-share-button col-sm-offset-5 col-sm-1" data-href="https://www.mycause.io"
 				data-layout="button"></div>
-			<div class="fb-like" data-href="https://mycause.io"
+			</div>
+			<br/>
+			<div class="row">
+				<div class="fb-like col-sm-offset-4 col-sm-4" data-href="https://mycause.io"
 				data-layout="standard" data-action="like" data-show-faces="false"
 				data-share="false"></div>
-
+			</div>
+			<br/>
 			<!-- Twitter button -->
-			<a href="https://twitter.com/share" class="twitter-share-button"
-				data-text="Check out this great cause on mycause.io!"
-				data-size="large">Tweet</a>
+			<div class="row">
+				<div class="col-sm-offset-5 col-sm-1">
+					<a href="https://twitter.com/share" class="twitter-share-button" data-text="Check out this great cause on mycause.io!"
+					data-size="large">Tweet</a>
+				</div>
+			</div>
 			<script>
 				!function(d, s, id) {
 					var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/
