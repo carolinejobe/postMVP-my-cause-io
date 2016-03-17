@@ -120,26 +120,91 @@
 			<!-- List of postings based on upvotes -->
 			<main> 
 				<div class="container">
-				<c:forEach var="myvar" items="${tenPosts}">
-				<div class="row">
-					<div class="post-preview">
-							<!-- Post preview image -->
-							<img src="${myvar.getImageLink()}" />
-							<!-- Post title -->
-							<h2>${myvar.getTitle()}</h2>
-							<!-- Post description -->
-							<p>${myvar.getDescription()}</p>
-							<p>Upvotes: ${myvar.getPostUpvotes() }</p>
-							<form action="cause.html">
-								<input type="hidden" name="postId" value="${myvar.getPostId()}" />
-								<input type="hidden" name="catId" value="${myvar.getCatId()}" />
-								<input type="submit" value="visit" name="visit" />
-							</form>
+					<div class="row">
+						<c:forEach var="myvar" items="${ninePosts}" begin="0" end="2">
+							<div class="col-md-4">
+								<div class="panel panel-default">
+									<div class="top-post-preview">
+										<div class="panel-heading">
+											<!-- Post preview image -->
+											<img src="${myvar.getImageLink()}" class="img-responsive"/>
+											<!-- Post title -->
+											<h2>${myvar.getTitle()}</h2>
+										</div>
+										<div class="panel-body">
+											<!-- Post description -->
+											<p>${myvar.getDescription()}</p>
+											<p>Upvotes: ${myvar.getPostUpvotes() }</p>
+											<form action="cause.html">
+												<input type="hidden" name="postId" value="${myvar.getPostId()}" />
+												<input type="hidden" name="catId" value="${myvar.getCatId()}" />
+												<input type="submit" value="visit" name="visit" />
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</c:forEach> 
 					</div>
+				
+					
+					<div class="row">
+						<c:forEach var="myvar" items="${ninePosts}" begin="0" end="2">
+							<div class="col-md-4">
+								<div class="panel panel-default">
+									<div class="top-post-preview">
+										<div class="panel-heading">
+											<!-- Post preview image -->
+											<img src="${myvar.getImageLink()}" class="img-responsive"/>
+											<!-- Post title -->
+											<h2>${myvar.getTitle()}</h2>
+										</div>
+										<div class="panel-body">
+											<!-- Post description -->
+											<p>${myvar.getDescription()}</p>
+											<p>Upvotes: ${myvar.getPostUpvotes() }</p>
+											<form action="cause.html">
+												<input type="hidden" name="postId" value="${myvar.getPostId()}" />
+												<input type="hidden" name="catId" value="${myvar.getCatId()}" />
+												<input type="submit" value="visit" name="visit" />
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</c:forEach> 
+					</div>
+					
+					
+					<div class="row">
+						<c:forEach var="myvar" items="${ninePosts}" begin="0" end="2">
+							<div class="col-md-4">
+								<div class="panel panel-default">
+									<div class="top-post-preview">
+										<div class="panel-heading">
+											<!-- Post preview image -->
+											<img src="${myvar.getImageLink()}" class="img-responsive"/>
+											<!-- Post title -->
+											<h2>${myvar.getTitle()}</h2>
+										</div>
+										<div class="panel-body">
+											<!-- Post description -->
+											<p>${myvar.getDescription()}</p>
+											<p>Upvotes: ${myvar.getPostUpvotes() }</p>
+											<form action="cause.html">
+												<input type="hidden" name="postId" value="${myvar.getPostId()}" />
+												<input type="hidden" name="catId" value="${myvar.getCatId()}" />
+												<input type="submit" value="visit" name="visit" />
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</c:forEach> 
+					</div>
+				
 				</div>
-			</c:forEach> 
-			</div>
-			</main>
+				</main>
 			<!-- End content block -->
 
 
@@ -147,7 +212,7 @@
 
 
 
-	<footer>
+	<footer class="footer">
 		<div class="container">
 			<p>&copy; All rights reserved by Jeseekia Vaughn, Caroline Jobe, and Aaron Ribant.</p>
 		</div>
