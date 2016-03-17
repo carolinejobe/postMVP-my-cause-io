@@ -14,7 +14,7 @@
 
 <!-- Site specific styles -->
 <link rel="stylesheet" href="css/styles.css">
-<title>MyCause.io</title>
+<title>MyCause.io | Home</title>
 </head>
 <body>
 

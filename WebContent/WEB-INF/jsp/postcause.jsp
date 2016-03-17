@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="css/styles.css">
 
  <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
-<title>Post For Help</title>
+<title>MyCause.io | Post Your Cause</title>
 </head>
 <body>
 	<!-- Site Navigation -->
