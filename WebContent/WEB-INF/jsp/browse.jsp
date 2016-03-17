@@ -48,8 +48,8 @@
 			<div class="container">
 		
 		<div class="form-group">
-			<label for="categorySelect" class="col-sm-4 control-label">Select a category</label>
-			<div class="col-sm-8">
+			<label for="categorySelect" class="col-sm-offset-1 col-sm-4 control-label">Select a category</label>
+			<div class="col-sm-3">
 				<select name="category" class="form-control col-sm-2" id="categorySelect">
 					<option value="0">all categories</option>
 					<option value="1">money</option>
@@ -61,8 +61,8 @@
 		</div>
 		
 		<div class="form-group">
-			<label for="sortSelect" class="col-sm-4 control-label">Sort causes by: </label>
-			<div class="col-sm-8">
+			<label for="sortSelect" class="col-sm-offset-1 col-sm-4 control-label">Sort causes by: </label>
+			<div class="col-sm-3">
 				<select name="sort" class="form-control col-sm-2" id="sortSelect">
 					<option value="post_id desc">newest first</option>
 					<option value="post_id asc">oldest first</option>
@@ -73,7 +73,7 @@
 		</div> 
 			
 		<div class="form-group">
-	    <div class="col-sm-offset-4 col-sm-8">
+	    <div class="col-sm-offset-5 col-sm-2">
 	      <button type="submit" value="Search" class="btn btn-default">Search</button>
 	    </div>
 	  </div>	
@@ -93,7 +93,7 @@
 		<div class="container">
 				<c:forEach var="myvar" items="${selectedPosts}">
 				<div class="row">
-					<div class="panel panel-default">
+					<div class="panel panel-default col-sm-offset-3 col-sm-6">
 						<div class="post-preview">
 							<div class="panel-heading">
 								<!-- Post preview image -->
