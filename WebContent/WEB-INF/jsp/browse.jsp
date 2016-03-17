@@ -44,24 +44,40 @@
 			<h2 class="page-header">Browse:</h2>
 			<p class="col-sm-offset-2 col-sm-10">Browse for a cause by category</p>		
 		</div>
-		<form action="processBrowse.html" method="post">
+		<form action="processBrowse.html" method="post" class="form-horizantal">
+			<div class="container">
 		
-		Select a category:<select name="category">
-			<option value="0">all categories</option>
-			<option value="1">money</option>
-			<option value="2">time</option>
-			<option value="3">food</option>
-			<option value="4">material</option>
-		</select>
+		<div class="form-group">
+			<label for="categorySelect" class="col-sm-4 control-label">Select a category</label>
+			<div class="col-sm-8">
+				<select name="category" class="form-control col-sm-2" id="categorySelect">
+					<option value="0">all categories</option>
+					<option value="1">money</option>
+					<option value="2">time</option>
+					<option value="3">food</option>
+					<option value="4">material</option>
+				</select>
+			</div>	
+		</div>
 		
-		Sort causes by:<select name="sort">
-			<option value="post_id desc">newest first</option>
-			<option value="post_id asc">oldest first</option>
-			<option value="upvotes desc">most upvotes</option>
-			<option value="upvotes asc">fewest upvotes</option>
-		</select><br> 
+		<div class="form-group">
+			<label for="sortSelect" class="col-sm-4 control-label">Sort causes by: </label>
+			<div class="col-sm-8">
+				<select name="sort" class="form-control col-sm-2" id="sortSelect">
+					<option value="post_id desc">newest first</option>
+					<option value="post_id asc">oldest first</option>
+					<option value="upvotes desc">most upvotes</option>
+					<option value="upvotes asc">fewest upvotes</option>
+				</select>
+			</div>
+		</div> 
 			
-			<input type="submit" value="Search"/>
+		<div class="form-group">
+	    <div class="col-sm-offset-2 col-sm-10">
+	      <button type="submit" value="Search" class="btn btn-default">Search</button>
+	    </div>
+	  </div>	
+			</div>
 		</form>
 		
 <!-- 		<div class="post-preview"> -->
