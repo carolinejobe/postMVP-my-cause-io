@@ -73,7 +73,7 @@
 		</div> 
 			
 		<div class="form-group">
-	    <div class="col-sm-offset-2 col-sm-10">
+	    <div class="col-sm-offset-4 col-sm-8">
 	      <button type="submit" value="Search" class="btn btn-default">Search</button>
 	    </div>
 	  </div>	
