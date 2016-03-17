@@ -41,8 +41,8 @@
 	            <li class="active"><a href="postcause.html">Post My Cause</a></li>
 	            <li><a href="search.html">Search</a></li>
 	            <li><a href="browse.html">Browse</a></li>
-	            <li><a href="signup.html">Sign Up</a></li>
-	            <li><a href="login">Login</a></li>
+	            <li id="signup"><a href="signup.html">Sign Up</a></li>
+	            <li id="login"><a href="login.html">Login</a></li>
 	          </ul>
 	        </div><!--/.nav-collapse -->
 	      </div>
