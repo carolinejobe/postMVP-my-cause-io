@@ -32,7 +32,7 @@ $( "#connect" ).click(function() {
 	
 	
 	//alert("Email "+ newEmail + " to connect to this cause");
-	swal({   title: "Send an <small>email</small>!",
+	swal({   title: "Send an email!",
 		//text: "A custom <span style="color:#F8BB86">html<span> message.",
 		
 		text: "Click to send an email to <a href='mailto:"+email+"'>"+ newEmail +"</a>",
