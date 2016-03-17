@@ -73,6 +73,9 @@
 	    <div class="col-sm-8">
 	      <input type="text" name="postheadline" maxlength="59" class="form-control" id="inputHeadline" placeholder="Enter a title (max 59 characters)" required/>
 	    </div>
+	    <div class="col-sm-offset-2 col-sm-8">
+	    	<p class="help-block">Example: Math Tutors Needed at Detroit Learning Center!</p>
+	    </div>
 	  </div>
 	  <div class="form-group">
 	    <label for="inputDescription" class="col-sm-2 control-label">Description</label>
@@ -80,11 +83,14 @@
 	      	<!-- <input type="text" name=post_desc class="form-control" id="inputDescription" placeholder="Enter a description of your cause (max 249 characters)" required/> -->
 			<textarea name="post_desc" maxlength="249" id="inputDescription" placeholder="Enter a description of your cause (max 249 characters)" class="form-control" rows="3" required/></textarea>
 	    </div>
+	    <div class="col-sm-offset-2 col-sm-8">
+	    	<p class="help-block">Example: The Detroit Learning Center is looking for tutors to work with first and second graders on their math skills.  Patience and a strong foundation in math is a must, but previous experience is not required.</p>
+	    </div>
 	  </div>
 	  
 	  <div class="form-group">
 	    <div class="col-sm-offset-2 col-sm-10">
-	      <button type="submit" form="form1" value="Submit" class="btn btn-default">Submit</button>
+	      <button type="submit" value="submit" class="btn btn-default">Submit</button>
 	    </div>
 	  </div>
 	  </div>
