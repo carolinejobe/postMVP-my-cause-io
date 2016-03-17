@@ -56,37 +56,37 @@
 			<div class="container">
 			
 				<div class="form-group">
-				  <label for="firstNameInput" class="col-sm-2 control-label">First Name:</label>
-				  <div class="col-sm-10">
+				  <label for="firstNameInput" class="col-sm-offset-2 col-sm-2 control-label">First Name:</label>
+				  <div class="col-sm-4">
 				    <input type="text" name="firstname" class="form-control" id="firstNameInput" placeholder="Enter your first name." required/>
 				  </div>
 				</div>
 				<div class="form-group">
-				  <label for="lastNameInput" class="col-sm-2 control-label">Last Name:</label>
-				  <div class="col-sm-10">
+				  <label for="lastNameInput" class="col-sm-offset-2 col-sm-2 control-label">Last Name:</label>
+				  <div class="col-sm-4">
 				    <input type="text" name="lastname" class="form-control" id="lastNameInput" placeholder="Enter your last name." required/>
 				  </div>
 				</div>
 				<div class="form-group">
-				  <label for="organizationInput" class="col-sm-2 control-label">Organization Name:</label>
-				  <div class="col-sm-10">
+				  <label for="organizationInput" class="col-sm-offset-2 col-sm-2 control-label">Organization Name:</label>
+				  <div class="col-sm-4">
 				    <input type="text" name="organization" class="form-control" id="organizationInput" placeholder="Enter your organization if applicable."/>
 				  </div>
 				</div>
 				<div class="form-group">
-			    	<label for="inputEmail" class="col-sm-2 control-label">Email Address: </label>
-			    	<div class="col-sm-10">
+			    	<label for="inputEmail" class="col-sm-offset-2 col-sm-2 control-label">Email Address: </label>
+			    	<div class="col-sm-4">
 			    		<input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email Address" required/>
 			    	</div>
 			    </div>
 				<div class="form-group">
-				  <label for="inputPassword" class="col-sm-2 control-label">Password</label>
-				  <div class="col-sm-10">
+				  <label for="inputPassword" class="col-sm-offset-2 col-sm-2 control-label">Password</label>
+				  <div class="col-sm-4">
 				    <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Password">
 				  </div>
 				</div>
 				<div class="form-group">
-				  <div class="col-sm-offset-2 col-sm-10">
+				  <div class="col-sm-offset-5 col-sm-2">
 				    <button type="submit" value="submit" class="btn btn-default">Join Us!</button>
 				  </div>
 				</div>
