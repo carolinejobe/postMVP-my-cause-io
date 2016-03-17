@@ -77,7 +77,7 @@
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="#">Home</a></li>
+					<li><a href="index.html">Home</a></li>
 					<li><a href="postcause.html">Post My Cause</a></li>
 					<li><a href="search.html">Search</a></li>
 					<li><a href="browse.html">Browse</a></li>
