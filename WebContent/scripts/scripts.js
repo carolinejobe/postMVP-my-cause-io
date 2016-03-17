@@ -44,8 +44,12 @@ $(document).ready(function(){
 	var loginValue = Cookies.get("userid");
 
 	if(loginValue != null) {
+		
 		$(".nav").append(
 			"<li><a href=\"logout.html\">Logout</a></li>"
 		);
+		$("#login").hide();
+		$("#signup").hide();
+	
 	}
 });
