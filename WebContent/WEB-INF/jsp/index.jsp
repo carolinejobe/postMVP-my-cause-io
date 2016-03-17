@@ -97,7 +97,7 @@
 							<h1>Now Is The Time</h1>
 							<p>Take action. Make a difference.</p>
 							<p>
-								<a class="btn btn-lg btn-primary" href="Search.html" role="button">Search</a>
+								<a class="btn btn-lg btn-primary" href="search.html" role="button">Search</a>
 							</p>
 						</div>
 					</div>
