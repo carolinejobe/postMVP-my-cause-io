@@ -40,10 +40,24 @@
 	
 	<!-- Search Form -->
 	<main>
-		<h2>Search for a cause:</h2>
-		<form action="processSearch" method="post">
-			<input type="text" name="searchTerm"/>
-			<input type="submit" value="Search"/>
+		<div class="container">
+			<h2 class="page-header">Search for a cause:</h2>
+		</div>
+		<form action="processSearch" method="post" class="form-horizantal">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-offset-3 col-sm-4">
+						<div class="form-group">
+					    	<input type="text" name="searchTerm" class="form-control" id="searchInput" placeholder="pizza, park, food, etc..." required/>
+						</div>
+					</div>
+				<div class="col-sm-offset1 col-sm-1">
+					<div class="form-group">
+				    	<button type="submit" value="submit" class="btn btn-default">Search</button>
+					</div>
+					</div>
+				</div>
+			</div>
 		</form>
 		
 <!-- 		<div class="post-preview"> -->
