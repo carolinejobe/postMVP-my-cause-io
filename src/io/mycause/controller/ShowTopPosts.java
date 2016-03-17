@@ -29,7 +29,7 @@ public class ShowTopPosts {
 			Connection conn = ds.getConnection();
 
 			Statement s = conn.createStatement();
-			ResultSet results = s.executeQuery("select * from maindb.posts order by upvotes desc limit 10");
+			ResultSet results = s.executeQuery("select * from maindb.posts order by upvotes desc limit 9");
 
 			ArrayList<Post> topPosts = new ArrayList<>();
 
@@ -68,7 +68,7 @@ public class ShowTopPosts {
 
 			}
 
-			return new ModelAndView("index", "tenPosts", topPosts);
+			return new ModelAndView("index", "ninePosts", topPosts);
 
 		} catch (Exception e) {
 			e.printStackTrace();
