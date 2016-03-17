@@ -59,6 +59,7 @@ public class AddPostToDB {
 			if (results.next()) {
 				postID = results.getString(1);
 			}
+			conn.close();
 			return new ModelAndView("redirect:/cause.html?postId="+ postID);
 
 		} catch (Exception e) {

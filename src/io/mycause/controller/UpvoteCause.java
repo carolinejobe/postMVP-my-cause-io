@@ -79,7 +79,7 @@ public class UpvoteCause {
 					
 					if (result.next())
 						postInfo[5] = result.getString(1);
-					
+			conn.close();		
 			return new ModelAndView("cause", "info", postInfo);
 			
 		} catch (Exception e) {

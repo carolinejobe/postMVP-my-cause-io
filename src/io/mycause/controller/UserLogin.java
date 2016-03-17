@@ -42,10 +42,11 @@ public class UserLogin {
 				Cookie c = new Cookie("userid", userid);
 
 				response.addCookie(c);
-
+				conn.close();
 				return new ModelAndView("index", "WelcomeMessage", "You have successfully logged in!");
 			} else
 			{
+				conn.close();
 				return new ModelAndView("login", "message", "Invalid username/password. Please try again.");
 
 			}
