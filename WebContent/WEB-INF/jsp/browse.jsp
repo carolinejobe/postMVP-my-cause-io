@@ -40,7 +40,10 @@
 	
 	<!-- Browse Form -->
 	<main>
-		<h2>Browse:</h2>
+		<div class="container">
+			<h2 class="page-header">Browse:</h2>
+			<p class="col-sm-offset-2 col-sm-10">Browse for a cause by category</p>		
+		</div>
 		<form action="processBrowse.html" method="post">
 		
 		Select a category:<select name="category">
