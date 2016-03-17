@@ -8,7 +8,7 @@
 
 <!-- Site specific styles -->
 <link rel="stylesheet" href="css/styles.css">
-<title>Insert title here</title>
+<title>MyCause.io | Oops!</title>
 </head>
 <body>
 

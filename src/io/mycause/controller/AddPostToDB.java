@@ -28,8 +28,12 @@ public class AddPostToDB {
 			DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/dbb");
 			Connection conn = ds.getConnection();
 
-			// get user_id from cookie and cast to int
+			// if user is not logged in, bounce to login page with a message
 			Cookie[] clientCookies = request.getCookies();
+			if (clientCookies == null || clientCookies.length == 1) {
+				return new ModelAndView("login", "message", "You must be logged in to create a post.");
+			}
+			// get user_id from cookie and cast to int
 			String userID = "";
 			int userIDint;
 			userID = clientCookies[1].getValue();

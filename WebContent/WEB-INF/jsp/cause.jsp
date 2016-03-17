@@ -14,7 +14,7 @@
 <!-- Site specific styles -->
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
-<title>MyCause.io</title>
+<title>MyCause.io | Cause</title>
 </head>
 
 <body>

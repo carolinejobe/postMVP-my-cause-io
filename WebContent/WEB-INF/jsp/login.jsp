@@ -12,7 +12,7 @@
 
 <!-- Site specific styles -->
 <link rel="stylesheet" href="css/styles.css">
-<title>MyCause.io</title>
+<title>MyCause.io | Login</title>
 </head>
 <body>
 	<!-- --------------------------- START SITE NAVIGATION BAR ------------------------ -->
