@@ -22,7 +22,7 @@
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	          </button>
-	          <a class="navbar-brand" href="#">MyCause.io</a>
+	          <a class="navbar-brand" href="index.html">MyCause.io</a>
 	        </div>
 	        <div id="navbar" class="collapse navbar-collapse">
 	          <ul class="nav navbar-nav">
@@ -41,10 +41,10 @@
 	<!-- Browse Form -->
 	<main>
 		<div class="container">
-			<h2 class="page-header">Browse:</h2>
-			<p class="col-sm-offset-2 col-sm-10">Browse for a cause by category</p>		
+			<h2 class="page-header">Browse</h2>
+			<p class="col-sm-offset-2 col-sm-10"></p>		
 		</div>
-		<form action="processBrowse.html" method="post" class="form-horizantal">
+		<form action="processBrowse.html" method="post" class="form-horizontal">
 			<div class="container">
 		
 		<div class="form-group">
