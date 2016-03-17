@@ -50,7 +50,7 @@ public class ShowTopPosts {
 					imageLink = "images/timeIconSmall.png";
 					break;
 				case 3:
-					imageLink = "images/foodIconsmall.png";
+					imageLink = "images/foodIconSmall.png";
 					break;
 				case 4:
 					imageLink = "images/materialsIconSmall.png";
