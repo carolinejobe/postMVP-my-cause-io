@@ -1,4 +1,4 @@
-package io.mycause.controller;
+package io.mycause.controller.posts;
 
 public class Post {
 	private String title;

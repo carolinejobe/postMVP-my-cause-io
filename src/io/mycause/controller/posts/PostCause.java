@@ -1,4 +1,4 @@
-package io.mycause.controller;
+package io.mycause.controller.posts;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

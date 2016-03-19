@@ -1,4 +1,4 @@
-package io.mycause.controller;
+package io.mycause.controller.posts;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

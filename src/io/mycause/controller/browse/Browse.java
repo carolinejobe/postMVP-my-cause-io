@@ -1,4 +1,4 @@
-package io.mycause.controller;
+package io.mycause.controller.browse;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -14,42 +14,34 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-@Controller
-public class SearchResults {
+import io.mycause.controller.posts.Post;
 
-	
-	@RequestMapping("/processSearch")
-	public ModelAndView processSearch(@RequestParam("searchTerm") String searchTerm){
-		try{
+@Controller
+public class Browse {
+
+	@RequestMapping("/processBrowse")
+	public ModelAndView processBrowse(@RequestParam("category") String category, @RequestParam("sort") String sort) {
+
+		try {
+			
 			//connect to database
 			Context ctx = new InitialContext();
 			DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/dbb");
 			Connection conn = ds.getConnection();
 			
-			String catID="";
-			
-			if (searchTerm.contains("time")){
-				catID="1";
-			}
-			if (searchTerm.contains("money")){
-				catID="2";
-			}
-			if (searchTerm.contains("food")){
-				catID="3";
-			}
-			if (searchTerm.contains("material")){
-				catID="4";
+			if(category.equals("0")){
+				category="1,2,3,4";
 			}
 			
 			// create mySQL statements
-			String searchStatement = "select * from maindb.posts where (post_headline like '%" + searchTerm + "%') or (post_desc like '%" + searchTerm + "%') or (cat_id like '" + catID + "')";
+			String browseStatement = "select * from maindb.posts where cat_id in (" + category + ") order by " + sort;
 			// create the mySQL insert preparedstatement
-			PreparedStatement searchPreparedStatement = conn.prepareStatement(searchStatement);
+			PreparedStatement browsePreparedStatement = conn.prepareStatement(browseStatement);
 			
 			// execute the preparedstatement
-			ResultSet results = searchPreparedStatement.executeQuery();
+			ResultSet results = browsePreparedStatement.executeQuery();
 			
-			ArrayList<Post> searchResults = new ArrayList<>();
+			ArrayList<Post> browsePosts = new ArrayList<>();
 			
 			while (results.next()) {
 
@@ -82,16 +74,19 @@ public class SearchResults {
 				tempPost.setPostId(postId);
 				tempPost.setCatId(catId);
 				tempPost.setImageLink(imageLink);
-				searchResults.add(tempPost);
+				browsePosts.add(tempPost);
+
 			}
-		conn.close();
-		return new ModelAndView("search", "selectedPosts", searchResults);
-	} catch (Exception e)
+			conn.close();
+			return new ModelAndView("browse", "selectedPosts", browsePosts);
+		} catch (Exception e)
 
-	{
-		return new ModelAndView("search", "message",
-				"Your search returned 0 results. Please try another search. (Hint: try searching only one search term.)");
+		{
+			e.printStackTrace();
+			System.out.println(e.getStackTrace());
+			return new ModelAndView("browse", "message",
+					"There was an issue processing your request. Please try again.");
 
+		}
 	}
-}
 }

@@ -11,7 +11,10 @@
 	http://www.springframework.org/schema/context/spring-context.xsd">
 
 
-	<context:component-scan base-package="io.mycause.controller" />
+	<context:component-scan base-package="io.mycause.controller.users" />
+	<context:component-scan base-package="io.mycause.controller.browse" />
+	<context:component-scan base-package="io.mycause.controller.search" />
+	<context:component-scan base-package="io.mycause.controller.posts" />
 
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

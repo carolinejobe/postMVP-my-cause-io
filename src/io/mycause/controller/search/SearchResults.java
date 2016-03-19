@@ -1,9 +1,8 @@
-package io.mycause.controller;
+package io.mycause.controller.search;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ArrayList;
 
 import javax.naming.Context;
@@ -15,24 +14,45 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-//import com.mysql.jdbc.Statement;
+import io.mycause.controller.posts.Post;
 
 @Controller
-public class ShowTopPosts {
+public class SearchResults {
 
-	@RequestMapping("/index")
-	public ModelAndView showPosts() {
-		try {
-
+	
+	@RequestMapping("/processSearch")
+	public ModelAndView processSearch(@RequestParam("searchTerm") String searchTerm){
+		try{
+			//connect to database
 			Context ctx = new InitialContext();
 			DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/dbb");
 			Connection conn = ds.getConnection();
-
-			Statement s = conn.createStatement();
-			ResultSet results = s.executeQuery("select * from maindb.posts order by upvotes desc limit 9");
-
-			ArrayList<Post> topPosts = new ArrayList<>();
-
+			
+			String catID="";
+			
+			if (searchTerm.contains("time")){
+				catID="1";
+			}
+			if (searchTerm.contains("money")){
+				catID="2";
+			}
+			if (searchTerm.contains("food")){
+				catID="3";
+			}
+			if (searchTerm.contains("material")){
+				catID="4";
+			}
+			
+			// create mySQL statements
+			String searchStatement = "select * from maindb.posts where (post_headline like '%" + searchTerm + "%') or (post_desc like '%" + searchTerm + "%') or (cat_id like '" + catID + "')";
+			// create the mySQL insert preparedstatement
+			PreparedStatement searchPreparedStatement = conn.prepareStatement(searchStatement);
+			
+			// execute the preparedstatement
+			ResultSet results = searchPreparedStatement.executeQuery();
+			
+			ArrayList<Post> searchResults = new ArrayList<>();
+			
 			while (results.next()) {
 
 				int postId = results.getInt(1);
@@ -64,15 +84,16 @@ public class ShowTopPosts {
 				tempPost.setPostId(postId);
 				tempPost.setCatId(catId);
 				tempPost.setImageLink(imageLink);
-				topPosts.add(tempPost);
-
+				searchResults.add(tempPost);
 			}
-			conn.close();
-			return new ModelAndView("index", "ninePosts", topPosts);
+		conn.close();
+		return new ModelAndView("search", "selectedPosts", searchResults);
+	} catch (Exception e)
 
-		} catch (Exception e) {
-			e.printStackTrace();
-			return new ModelAndView("error", "errorMessage", "No posts to show");
-		}
+	{
+		return new ModelAndView("search", "message",
+				"Your search returned 0 results. Please try another search. (Hint: try searching only one search term.)");
+
 	}
+}
 }

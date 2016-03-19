@@ -1,4 +1,4 @@
-package io.mycause.controller;
+package io.mycause.controller.users;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;

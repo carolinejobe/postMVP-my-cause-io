@@ -1,4 +1,4 @@
-package io.mycause.controller;
+package io.mycause.controller.search;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

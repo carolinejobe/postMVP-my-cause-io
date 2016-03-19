@@ -1,4 +1,4 @@
-package io.mycause.controller;
+package io.mycause.controller.users;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

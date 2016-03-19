@@ -1,8 +1,8 @@
-package io.mycause.controller;
+package io.mycause.controller.posts;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 import javax.naming.Context;
@@ -11,36 +11,26 @@ import javax.sql.DataSource;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+//import com.mysql.jdbc.Statement;
+
 @Controller
-public class Browse {
+public class ShowTopPosts {
 
-	@RequestMapping("/processBrowse")
-	public ModelAndView processBrowse(@RequestParam("category") String category, @RequestParam("sort") String sort) {
-
+	@RequestMapping("/index")
+	public ModelAndView showPosts() {
 		try {
-			
-			//connect to database
+
 			Context ctx = new InitialContext();
 			DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/dbb");
 			Connection conn = ds.getConnection();
-			
-			if(category.equals("0")){
-				category="1,2,3,4";
-			}
-			
-			// create mySQL statements
-			String browseStatement = "select * from maindb.posts where cat_id in (" + category + ") order by " + sort;
-			// create the mySQL insert preparedstatement
-			PreparedStatement browsePreparedStatement = conn.prepareStatement(browseStatement);
-			
-			// execute the preparedstatement
-			ResultSet results = browsePreparedStatement.executeQuery();
-			
-			ArrayList<Post> browsePosts = new ArrayList<>();
-			
+
+			Statement s = conn.createStatement();
+			ResultSet results = s.executeQuery("select * from maindb.posts order by upvotes desc limit 9");
+
+			ArrayList<Post> topPosts = new ArrayList<>();
+
 			while (results.next()) {
 
 				int postId = results.getInt(1);
@@ -72,19 +62,15 @@ public class Browse {
 				tempPost.setPostId(postId);
 				tempPost.setCatId(catId);
 				tempPost.setImageLink(imageLink);
-				browsePosts.add(tempPost);
+				topPosts.add(tempPost);
 
 			}
 			conn.close();
-			return new ModelAndView("browse", "selectedPosts", browsePosts);
-		} catch (Exception e)
+			return new ModelAndView("index", "ninePosts", topPosts);
 
-		{
+		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println(e.getStackTrace());
-			return new ModelAndView("browse", "message",
-					"There was an issue processing your request. Please try again.");
-
+			return new ModelAndView("error", "errorMessage", "No posts to show");
 		}
 	}
 }
