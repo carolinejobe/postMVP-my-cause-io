@@ -90,33 +90,122 @@
 <!-- 		</div> -->
 		
 		<!-- Returned Results -->
-		<div class="container">
-				<c:forEach var="myvar" items="${selectedPosts}">
-				<div class="row">
-					<div class="panel panel-default col-sm-offset-3 col-sm-6">
-						<div class="post-preview">
-							<div class="panel-heading">
-								<!-- Post preview image -->
-								<img src="${myvar.getImageLink()}" />
-								<!-- Post title -->
-								<h2>${myvar.getTitle()}</h2>
+<!-- 		<div class="container"> -->
+<%-- 				<c:forEach var="myvar" items="${selectedPosts}"> --%>
+<!-- 				<div class="row"> -->
+<!-- 					<div class="panel panel-default col-sm-offset-3 col-sm-6"> -->
+<!-- 						<div class="post-preview"> -->
+<!-- 							<div class="panel-heading"> -->
+<!-- 								Post preview image -->
+<%-- 								<img src="${myvar.getImageLink()}" /> --%>
+<!-- 								Post title -->
+<%-- 								<h2>${myvar.getTitle()}</h2> --%>
+<!-- 							</div> -->
+<!-- 							<div class="panel-body"> -->
+<!-- 								Post description -->
+<%-- 								<p>${myvar.getDescription()}</p> --%>
+<%-- 								<p>Upvotes: ${myvar.getPostUpvotes() }</p> --%>
+<!-- 								<form action="cause.html"> -->
+<%-- 									<input type="hidden" name="postId" value="${myvar.getPostId()}" /> --%>
+<%-- 									<input type="hidden" name="catId" value="${myvar.getCatId()}" /> --%>
+<!-- 									<input type="submit" value="visit" name="visit" /> -->
+<!-- 								</form> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+<%-- 			</c:forEach>  --%>
+<!-- 			</div> -->
+<!-- 	</main> -->
+
+			<!-- returned results grid -->
+				<div class="container">
+					<div class="row">
+						<c:forEach var="myvar" items="${selectedPosts}" begin="0" end="2">
+							<div class="col-md-4">
+								<div class="panel panel-default">
+									<div class="top-post-preview">
+										<div class="panel-heading">
+											<!-- Post preview image -->
+											<img src="${myvar.getImageLink()}" class="img-responsive"/>
+											<!-- Post title -->
+											<h2>${myvar.getTitle()}</h2>
+										</div>
+										<div class="panel-body">
+											<!-- Post description -->
+											<p>${myvar.getDescription()}</p>
+											<p>Upvotes: ${myvar.getPostUpvotes() }</p>
+											<form action="cause.html">
+												<input type="hidden" name="postId" value="${myvar.getPostId()}" />
+												<input type="hidden" name="catId" value="${myvar.getCatId()}" />
+												<input type="submit" value="visit" name="visit" />
+											</form>
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="panel-body">
-								<!-- Post description -->
-								<p>${myvar.getDescription()}</p>
-								<p>Upvotes: ${myvar.getPostUpvotes() }</p>
-								<form action="cause.html">
-									<input type="hidden" name="postId" value="${myvar.getPostId()}" />
-									<input type="hidden" name="catId" value="${myvar.getCatId()}" />
-									<input type="submit" value="visit" name="visit" />
-								</form>
-							</div>
-						</div>
+						</c:forEach> 
 					</div>
+				
+					
+					<div class="row">
+						<c:forEach var="myvar" items="${selectedPosts}" begin="3" end="5">
+							<div class="col-md-4">
+								<div class="panel panel-default">
+									<div class="top-post-preview">
+										<div class="panel-heading">
+											<!-- Post preview image -->
+											<img src="${myvar.getImageLink()}" class="img-responsive"/>
+											<!-- Post title -->
+											<h2>${myvar.getTitle()}</h2>
+										</div>
+										<div class="panel-body">
+											<!-- Post description -->
+											<p>${myvar.getDescription()}</p>
+											<p>Upvotes: ${myvar.getPostUpvotes() }</p>
+											<form action="cause.html">
+												<input type="hidden" name="postId" value="${myvar.getPostId()}" />
+												<input type="hidden" name="catId" value="${myvar.getCatId()}" />
+												<input type="submit" value="visit" name="visit" />
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</c:forEach> 
+					</div>
+					
+					
+					<div class="row">
+						<c:forEach var="myvar" items="${selectedPosts}" begin="6" end="8">
+							<div class="col-md-4">
+								<div class="panel panel-default">
+									<div class="top-post-preview">
+										<div class="panel-heading">
+											<!-- Post preview image -->
+											<img src="${myvar.getImageLink()}" class="img-responsive"/>
+											<!-- Post title -->
+											<h2>${myvar.getTitle()}</h2>
+										</div>
+										<div class="panel-body">
+											<!-- Post description -->
+											<p>${myvar.getDescription()}</p>
+											<p>Upvotes: ${myvar.getPostUpvotes() }</p>
+											<form action="cause.html">
+												<input type="hidden" name="postId" value="${myvar.getPostId()}" />
+												<input type="hidden" name="catId" value="${myvar.getCatId()}" />
+												<input type="submit" value="visit" name="visit" />
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</c:forEach> 
+					</div>
+				
 				</div>
-			</c:forEach> 
-			</div>
-	</main>
+				</main>
+			<!-- End content block -->
 	
 	<footer class="footer">
 		<div class="container">
