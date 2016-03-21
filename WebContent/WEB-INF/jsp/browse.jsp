@@ -106,16 +106,17 @@
 								<!-- Post title -->
 								<h2>${myvar.getTitle()}</h2>
 							</div>
-							<div class="panel-body">
-								<!-- Post description -->
-								<p>${myvar.getDescription()}</p>
-								<p>Upvotes: ${myvar.getPostUpvotes() }</p>
-								<form action="cause.html">
-									<input type="hidden" name="postId" value="${myvar.getPostId()}" />
-									<input type="hidden" name="catId" value="${myvar.getCatId()}" />
-									<input type="submit" value="visit" name="visit" />
-								</form>
-							</div>
+								<div class="panel-body">
+									<!-- Post description -->
+									<p>${myvar.getDescription()}</p>
+									<p>Upvotes: ${myvar.getPostUpvotes() }</p>
+									<form action="cause.html">
+										<input type="hidden" name="postId"
+											value="${myvar.getPostId()}" /> <input type="hidden"
+											name="catId" value="${myvar.getCatId()}" /> <input
+											type="submit" value="visit" name="visit" />
+									</form>
+								</div>
 						</div>
 					</div>
 				</div>
