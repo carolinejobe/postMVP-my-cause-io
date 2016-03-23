@@ -23,7 +23,6 @@ public class Browse {
 	public ModelAndView processBrowse(@RequestParam("category") String category, @RequestParam("sort") String sort) {
 
 		try {
-			
 			//connect to database
 			Context ctx = new InitialContext();
 			DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/dbb");
