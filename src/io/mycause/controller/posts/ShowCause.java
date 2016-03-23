@@ -25,58 +25,50 @@ public class ShowCause {
 			Connection conn = ds.getConnection();
 
 			Statement s = conn.createStatement();
-			
-			//query to return selected post
-			ResultSet results = s.executeQuery("select * from maindb.posts where post_id='" + id + "'"); 
+			Statement statementObject = conn.createStatement();
+
+			// query to return selected post
+			ResultSet results = s.executeQuery("select * from maindb.posts where post_id='" + id + "'");
 
 			String[] postInfo = new String[7];
-			if (results.next()) {
+
+			while (results.next()) {
 
 				String postHeadline = results.getString(2);
 				String postDescription = results.getString(3);
-				String postCategoryId = results.getString(4);
-				String postUpvotes = results.getString(8);
-				String userId = results.getString(9);
+				int postUpvotes = results.getInt(8);
 				int catId = results.getInt(4);
-				
-				ResultSet result = s.executeQuery("select email from maindb.users where user_id = ' " + userId + " '");
-				String imageLink = "";
 
-				switch (catId) {
-				case 1:
-					imageLink = "images/moneyIconSmall.png";
-					break;
-				case 2:
-					imageLink = "images/timeIconSmall.png";
-					break;
-				case 3:
-					imageLink = "images/foodIconSmall.png";
-					break;
-				case 4:
-					imageLink = "images/resourcesIconSmall.png";
-					break;
+				Post tempPost = new Post();
+				tempPost.setTitle(postHeadline);
+				tempPost.setDescription(postDescription);
+				tempPost.setPostUpvotes(postUpvotes);
+				tempPost.setCatId(catId);
+				tempPost.setImageLink(catId);
 
-				}
+				String userId = results.getString(9);
 
-				
-				System.out.println(imageLink);
 				postInfo[0] = postHeadline;
 				postInfo[1] = postDescription;
-				postInfo[2] = postCategoryId;
-				postInfo[3] = postUpvotes;
+				postInfo[2] = Integer.toString(catId);
+				postInfo[3] = Integer.toString(postUpvotes);
 				postInfo[4] = Integer.toString(id);
-				postInfo[6] = imageLink;
+				postInfo[6] = tempPost.getImageLink();
+				
+				ResultSet result = statementObject.executeQuery("select email from maindb.users where user_id = ' " + userId + " '");
 
-				if (result.next())
+				while (result.next()) {
 					postInfo[5] = result.getString(1);
-				conn.close();
-				return new ModelAndView("cause", "info", postInfo);
-			}
-			else
-				conn.close();
-				return new ModelAndView("error", "message", "Post not found");
+				}
+				}
+			conn.close();
+			return new ModelAndView("cause", "info", postInfo);
 
-		} catch (Exception e) {
+		} catch (
+
+		Exception e)
+
+		{
 			e.printStackTrace();
 
 			return new ModelAndView("error", "errorMessage", "Sorry, we couldn't find that post! Please try again.");
