@@ -88,11 +88,11 @@
 			<!--/.nav-collapse -->
 		</div>
 	</nav>
-	<header> </header>
-	<main> <!-- START JUMBOTRON -->
+	<!-- START JUMBOTRON -->
+	<main> 
 	<div class="container">
 		<div class="jumbotron">
-			<img alt="" src="${info[6]}">
+			<span class="glyphicon glyphicon${info[6]}" aria-hidden="true"></span>
 			<h1>${info[0]}</h1>
 			<p>${info[1]}</p>
 			<p>Upvotes: ${info[3]}</p>

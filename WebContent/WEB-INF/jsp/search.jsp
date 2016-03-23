@@ -100,6 +100,7 @@
 				</div>
 			</c:forEach>
 		</div>
+		</div>
 		<div class="container">
 			<div class="row">
 				<c:forEach var="myvar" items="${selectedPosts}" begin="3" end="5">
@@ -128,6 +129,7 @@
 					</div>
 				</c:forEach>
 			</div>
+			</div>
 			<div class="container">
 				<div class="row">
 					<c:forEach var="myvar" items="${selectedPosts}" begin="6" end="8">
@@ -155,6 +157,7 @@
 							</div>
 						</div>
 					</c:forEach>
+				</div>
 				</div>
 	</main>
 
