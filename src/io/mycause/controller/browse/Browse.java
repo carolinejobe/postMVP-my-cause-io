@@ -54,16 +54,16 @@ public class Browse {
 
 				switch (catId) {
 				case 1:
-					imageLink = "images/moneyIconSmall.png";
+					imageLink = "-piggy-bank";
 					break;
 				case 2:
-					imageLink = "images/timeIconSmall.png";
+					imageLink = "-time";
 					break;
 				case 3:
-					imageLink = "images/foodIconSmall.png";
+					imageLink = "-apple";
 					break;
 				case 4:
-					imageLink = "images/resourcesIconSmall.png";
+					imageLink = "-wrench";
 					break;
 
 				}
