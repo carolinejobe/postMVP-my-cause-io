@@ -55,7 +55,7 @@
 				<div class="col-sm-offset-3 col-sm-4">
 					<div class="form-group">
 						<input type="text" name="searchTerm" class="form-control"
-							id="searchInput" placeholder="pizza, park, food, etc..." required />
+							id="searchInput" placeholder="Detroit, park, tutor, etc..." required />
 					</div>
 				</div>
 				<div class="col-sm-offset1 col-sm-1">
