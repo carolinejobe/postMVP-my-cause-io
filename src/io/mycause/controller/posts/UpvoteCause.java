@@ -40,46 +40,43 @@ public class UpvoteCause {
 			//repopulate page with cause info
 			conn = ds.getConnection();
 			Statement s = conn.createStatement();
-			ResultSet results = s.executeQuery("select * from maindb.posts where post_id="+id); // this line selects
+			Statement statementObject = conn.createStatement();
+
+			//query to return that exact post and related details
+			ResultSet results = s.executeQuery("select * from maindb.posts where post_id="+id); 
+
 			String[] postInfo = new String[7];
-		
-			results.next();
+
+			while (results.next()) {
+
 				String postHeadline = results.getString(2);
 				String postDescription = results.getString(3);
-				String postCategoryId = results.getString(4);
-				String postUpvotes = results.getString(8);
-				String userId = results.getString(9);
+				int postUpvotes = results.getInt(8);
 				int catId = results.getInt(4);
-				String imageLink = "";
 
-				//retrieve email from database
-				ResultSet result = s.executeQuery("select email from maindb.users where user_id = ' " + userId + " '");
+				Post tempPost = new Post();
+				tempPost.setTitle(postHeadline);
+				tempPost.setDescription(postDescription);
+				tempPost.setPostUpvotes(postUpvotes);
+				tempPost.setCatId(catId);
+				tempPost.setImageLink(catId);
+
+				String userId = results.getString(9);
+
+				postInfo[0] = postHeadline;
+				postInfo[1] = postDescription;
+				postInfo[2] = Integer.toString(catId);
+				postInfo[3] = Integer.toString(postUpvotes);
+				postInfo[4] = Integer.toString(id);
+				postInfo[6] = tempPost.getImageLink();
 				
-				switch (catId) {
-				case 1:
-					imageLink = "images/moneyIconSmall.png";
-					break;
-				case 2:
-					imageLink = "images/timeIconSmall.png";
-					break;
-				case 3:
-					imageLink = "images/foodIconSmall.png";
-					break;
-				case 4:
-					imageLink = "images/resourcesIconSmall.png";
-					break;
-				}	
-				
-					postInfo[0] = postHeadline;
-					postInfo[1] = postDescription;
-					postInfo[2] = postCategoryId;
-					postInfo[3] = postUpvotes;
-					postInfo[4] = Integer.toString(id);
-					postInfo[6] = imageLink;
-					
-					if (result.next())
-						postInfo[5] = result.getString(1);
-			conn.close();		
+				ResultSet result = statementObject.executeQuery("select email from maindb.users where user_id = ' " + userId + " '");
+
+				while (result.next()) {
+					postInfo[5] = result.getString(1);
+				}
+				}
+			conn.close();
 			return new ModelAndView("cause", "info", postInfo);
 			
 		} catch (Exception e) {
