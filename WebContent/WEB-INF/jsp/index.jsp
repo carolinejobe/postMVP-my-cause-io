@@ -127,7 +127,7 @@
 									<div class="top-post-preview">
 										<div class="panel-heading">
 											<!-- Post preview image -->
-											<img src="${myvar.getImageLink()}" class="img-responsive"/>
+											<span class="glyphicon glyphicon${myvar.getImageLink()}" aria-hidden="true"></span>
 											<!-- Post title -->
 											<h2>${myvar.getTitle()}</h2>
 										</div>
@@ -155,7 +155,7 @@
 									<div class="top-post-preview">
 										<div class="panel-heading">
 											<!-- Post preview image -->
-											<img src="${myvar.getImageLink()}" class="img-responsive"/>
+											<span class="glyphicon glyphicon${myvar.getImageLink()}" aria-hidden="true"></span>
 											<!-- Post title -->
 											<h2>${myvar.getTitle()}</h2>
 										</div>
@@ -183,7 +183,7 @@
 									<div class="top-post-preview">
 										<div class="panel-heading">
 											<!-- Post preview image -->
-											<img src="${myvar.getImageLink()}" class="img-responsive"/>
+											<span class="glyphicon glyphicon${myvar.getImageLink()}" aria-hidden="true"></span>
 											<!-- Post title -->
 											<h2>${myvar.getTitle()}</h2>
 										</div>

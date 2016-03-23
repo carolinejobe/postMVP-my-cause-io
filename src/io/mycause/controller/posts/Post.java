@@ -9,22 +9,36 @@ public class Post {
 	private int catId;
 	private String imageLink;
 	
-	public String getImageLink() {
-		return imageLink;
-	}
-
-	public void setImageLink(String imageLink) {
-		this.imageLink = imageLink;
-	}
-
 	public int getCatId() {
 		return catId;
 	}
-
+	
 	public void setCatId(int catId) {
 		this.catId = catId;
 	}
+	
 
+	public void setImageLink(int catID) {
+		switch (catId) {
+		case 1:
+			this.imageLink = "-piggy-bank";
+			break;
+		case 2:
+			this.imageLink = "-time";
+			break;
+		case 3:
+			this.imageLink = "-apple";
+			break;
+		case 4:
+			this.imageLink = "-wrench";
+			break;
+		}
+	}
+
+	public String getImageLink() {
+		return imageLink;
+	}
+	
 	public int getPostUpvotes() {
 		return postUpvotes;
 	}
