@@ -80,7 +80,7 @@
 						<div class="carousel-caption">
 							<h1>Give Back</h1>
 							<p>
-							There are many ways to give, whose cause will you support today?
+							There are many ways to give, which cause will you support today?
 							</p>
 							<p>
 								<a class="btn btn-lg btn-primary" href="signup.html" role="button">Sign up</a>
