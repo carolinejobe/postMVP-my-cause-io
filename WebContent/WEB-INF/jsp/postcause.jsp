@@ -71,7 +71,7 @@
 	  <div class="form-group">
 	    <label for="inputHeadline" class="col-sm-2 control-label">Headline</label>
 	    <div class="col-sm-8">
-	      <input type="text" name="postheadline" maxlength="59" class="form-control" id="inputHeadline" placeholder="Enter a title (max 59 characters)" required/>
+	      <input type="text" name="postheadline" maxlength="60" class="form-control" id="inputHeadline" placeholder="Enter a title (max 60 characters)" required/>
 	    </div>
 	    <div class="col-sm-offset-2 col-sm-8">
 	    	<p class="help-block">Example: Math Tutors Needed at Detroit Learning Center!</p>
@@ -81,7 +81,7 @@
 	    <label for="inputDescription" class="col-sm-2 control-label">Description</label>
 	    <div class="col-sm-8">
 	      	<!-- <input type="text" name=post_desc class="form-control" id="inputDescription" placeholder="Enter a description of your cause (max 249 characters)" required/> -->
-			<textarea name="post_desc" maxlength="249" id="inputDescription" placeholder="Enter a description of your cause (max 249 characters)" class="form-control" rows="3" required/></textarea>
+			<textarea name="post_desc" maxlength="250" id="inputDescription" placeholder="Enter a description of your cause (max 250 characters)" class="form-control" rows="3" required/></textarea>
 	    </div>
 	    <div class="col-sm-offset-2 col-sm-8">
 	    	<p class="help-block">Example: The Detroit Learning Center is looking for tutors to work with first and second graders on their math skills.  Patience and a strong foundation in math is a must, but previous experience is not required.</p>

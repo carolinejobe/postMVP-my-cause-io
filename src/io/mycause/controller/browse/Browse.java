@@ -49,30 +49,14 @@ public class Browse {
 				String postDescription = results.getString(3);
 				int postUpvotes = results.getInt(8);
 				int catId = results.getInt(4);
-				String imageLink = "";
 
-				switch (catId) {
-				case 1:
-					imageLink = "images/moneyIconSmall.png";
-					break;
-				case 2:
-					imageLink = "images/timeIconSmall.png";
-					break;
-				case 3:
-					imageLink = "images/foodIconSmall.png";
-					break;
-				case 4:
-					imageLink = "images/resourcesIconSmall.png";
-					break;
-
-				}
 				Post tempPost = new Post();
 				tempPost.setTitle(postHeadline);
 				tempPost.setDescription(postDescription);
 				tempPost.setPostUpvotes(postUpvotes);
 				tempPost.setPostId(postId);
 				tempPost.setCatId(catId);
-				tempPost.setImageLink(imageLink);
+				tempPost.setImageLink(catId);
 				browsePosts.add(tempPost);
 
 			}
