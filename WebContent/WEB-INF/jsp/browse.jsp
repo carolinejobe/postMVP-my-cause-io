@@ -112,7 +112,8 @@
 							<form action="cause.html">
 								<input type="hidden" name="postId" value="${myvar.getPostId()}" />
 								<input type="hidden" name="catId" value="${myvar.getCatId()}" />
-								<input type="submit" value="visit" name="visit" />
+<!-- 								<input type="submit" value="visit" name="visit" /> -->
+								<button type="submit" value="visit" class="btn btn-default" name="visit" id="visit">visit</button>
 							</form>
 						</div>
 					</div>

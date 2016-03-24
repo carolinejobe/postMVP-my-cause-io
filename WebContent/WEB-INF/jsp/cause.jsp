@@ -89,49 +89,57 @@
 		</div>
 	</nav>
 	<!-- START JUMBOTRON -->
-	<main> 
+	<main>
 	<div class="container">
 		<div class="jumbotron">
 			<span class="glyphicon glyphicon${info[6]}" aria-hidden="true"></span>
 			<h1>${info[0]}</h1>
 			<p>${info[1]}</p>
 			<p>Upvotes: ${info[3]}</p>
-			
+
 			<div class="row">
 				<div class="col-sm-offset-4 col-sm-2">
 					<!-- Form for adding upvote to this post -->
 					<form action="upvote" name="upvoteform" method=POST>
 						<!-- <input type="submit" value="upvote" />  -->
-						<button class="btn btn-success btn-lg" value="submit" type="submit" name="upvote">upvote </button>
+						<button class="btn btn-success btn-lg" value="submit"
+							type="submit" name="upvote">
+							<span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span> 
+							upvote
+						</button>
 						<input type="hidden" value=${info[4] } name="postId" />
 					</form>
 				</div>
 				<div class="col-sm-2">
 					<form action="connect" method=POST>
-						<button class="btn btn-success btn-lg" type="button" name="upvote" id="connect">connect</button>
+						<button class="btn btn-success btn-lg" type="button" name="connect"
+							id="connect">
+							<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+							connect</button>
 						<input id="contact" type="hidden" name="${info[5]}" />
 					</form>
 				</div>
 			</div>
-			<br/>
+			<br />
 			<!-- Facebook like/share buttons -->
-			
+
 			<div class="row">
-				<div class="fb-share-button col-sm-1" data-href="https://www.mycause.io"
-				data-layout="button"></div>
-			<!-- </div> -->
-			<br/>
-			<!-- <div class="row">
+				<div class="fb-share-button col-sm-1"
+					data-href="https://www.mycause.io" data-layout="button"></div>
+				<!-- </div> -->
+				<br />
+				<!-- <div class="row">
 				<div class="fb-like col-sm-offset-4 col-sm-4" data-href="https://mycause.io"
 				data-layout="standard" data-action="like" data-show-faces="false"
 				data-share="false"></div>
 			</div> -->
-			<br/>
-			<!-- Twitter button -->
-			<!-- <div class="row"> -->
+				<br />
+				<!-- Twitter button -->
+				<!-- <div class="row"> -->
 				<div class="col-sm-1">
-					<a href="https://twitter.com/share" class="twitter-share-button" data-text="Check out this great cause on mycause.io!"
-					data-size="large">Tweet</a>
+					<a href="https://twitter.com/share" class="twitter-share-button"
+						data-text="Check out this great cause on mycause.io!"
+						data-size="large">Tweet</a>
 				</div>
 			</div>
 			<script>
@@ -146,15 +154,15 @@
 					}
 				}(document, 'script', 'twitter-wjs');
 			</script>
-			
+
+		</div>
 	</div>
-	</div>
-	<!-- END JUMBOTRON -->
-	</main>
-	
+	<!-- END JUMBOTRON --> </main>
+
 	<footer class="footer">
 		<div class="container">
-			<p>&copy; All rights reserved by Jeseekia Vaughn, Caroline Jobe, and Aaron Ribant.</p>
+			<p>&copy; All rights reserved by Jeseekia Vaughn, Caroline Jobe,
+				and Aaron Ribant.</p>
 		</div>
 	</footer>
 
