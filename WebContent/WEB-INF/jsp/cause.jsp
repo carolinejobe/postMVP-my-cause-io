@@ -104,7 +104,7 @@
 						<!-- <input type="submit" value="upvote" />  -->
 						<button class="btn btn-success btn-lg" value="submit"
 							type="submit" name="upvote">
-							<span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span> 
+							<span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span> 
 							upvote
 						</button>
 						<input type="hidden" value=${info[4] } name="postId" />
