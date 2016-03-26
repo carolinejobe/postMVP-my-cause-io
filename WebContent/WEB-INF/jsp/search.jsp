@@ -67,98 +67,42 @@
 		</div>
 	</form>
 
-	<!-- 		<div class="post-preview"> --> <!-- 			<!-- Post preview image -->
-	<!-- 			<img src="#"/> --> <!-- 			<!-- Post description --> <!-- 			<p></p> -->
-	<!-- 			<!-- Link to cause page --> <!-- 			<a href="">View this cause</a> -->
-	<!-- 		</div> --> <!-- Returned Results -->
 
-	<div class="container">
-		<div class="row">
-			<c:forEach var="myvar" items="${selectedPosts}" begin="0" end="2">
-				<div class="col-md-4">
-					<div class="panel panel-default">
-						<div class="top-post-preview">
-							<div class="panel-heading">
-								<!-- Post preview image -->
-								<%-- 											<img src="${myvar.getImageLink()}" class="img-responsive"/> --%>
-								<span class="glyphicon glyphicon${myvar.getImageLink()}" aria-hidden="true"></span>
-								<!-- Post title -->
-								<h2>${myvar.getTitle()}</h2>
-							</div>
-							<div class="panel-body">
-								<!-- Post description -->
-								<p>${myvar.getDescription()}</p>
-								<p>Upvotes: ${myvar.getPostUpvotes() }</p>
-								<form action="cause.html">
-									<input type="hidden" name="postId" value="${myvar.getPostId()}" />
-									<input type="hidden" name="catId" value="${myvar.getCatId()}" />
-									<input type="submit" value="visit" name="visit" />
-								</form>
-							</div>
+	<!-- returned results grid -->
+		<c:forEach var="myvar" items="${selectedPosts}" varStatus="counter">
+			<c:if test="${counter.index==0 || (counter.index)%3==0}">
+							<div class="row">
+			</c:if> 
+			<div class="col-md-4">
+				<div class="panel panel-default">
+					<div class="top-post-preview">
+						<div class="panel-heading">
+							<!-- Post preview image -->
+							<span class="glyphicon glyphicon${myvar.getImageLink()}"
+								aria-hidden="true"></span>
+							<!-- Post title -->
+							<h2>${myvar.getTitle()}</h2>
+						</div>
+						<div class="panel-body">
+							<!-- Post description -->
+							<p>${myvar.getDescription()}</p>
+							<p>Upvotes: ${myvar.getPostUpvotes() }</p>
+							<form action="cause.html">
+								<input type="hidden" name="postId" value="${myvar.getPostId()}" />
+								<input type="hidden" name="catId" value="${myvar.getCatId()}" />
+								<button type="submit" value="visit" class="btn btn-default"
+									name="visit" id="visit">visit</button>
+							</form>
 						</div>
 					</div>
 				</div>
-			</c:forEach>
-		</div>
-		</div>
-		<div class="container">
-			<div class="row">
-				<c:forEach var="myvar" items="${selectedPosts}" begin="3" end="5">
-					<div class="col-md-4">
-						<div class="panel panel-default">
-							<div class="top-post-preview">
-								<div class="panel-heading">
-									<!-- Post preview image -->
-									<span class="glyphicon glyphicon${myvar.getImageLink()}" aria-hidden="true"></span>
-									<!-- Post title -->
-									<h2>${myvar.getTitle()}</h2>
-								</div>
-								<div class="panel-body">
-									<!-- Post description -->
-									<p>${myvar.getDescription()}</p>
-									<p>Upvotes: ${myvar.getPostUpvotes() }</p>
-									<form action="cause.html">
-										<input type="hidden" name="postId"
-											value="${myvar.getPostId()}" /> <input type="hidden"
-											name="catId" value="${myvar.getCatId()}" /> <input
-											type="submit" value="visit" name="visit" />
-									</form>
-								</div>
-							</div>
-						</div>
-					</div>
-				</c:forEach>
 			</div>
-			</div>
-			<div class="container">
-				<div class="row">
-					<c:forEach var="myvar" items="${selectedPosts}" begin="6" end="8">
-						<div class="col-md-4">
-							<div class="panel panel-default">
-								<div class="top-post-preview">
-									<div class="panel-heading">
-										<!-- Post preview image -->
-										<span class="glyphicon glyphicon${myvar.getImageLink()}" aria-hidden="true"></span>
-										<!-- Post title -->
-										<h2>${myvar.getTitle()}</h2>
-									</div>
-									<div class="panel-body">
-										<!-- Post description -->
-										<p>${myvar.getDescription()}</p>
-										<p>Upvotes: ${myvar.getPostUpvotes() }</p>
-										<form action="cause.html">
-											<input type="hidden" name="postId"
-												value="${myvar.getPostId()}" /> <input type="hidden"
-												name="catId" value="${myvar.getCatId()}" /> <input
-												type="submit" value="visit" name="visit" />
-										</form>
-									</div>
-								</div>
+				<c:if test="${(counter.index+1)%3==0}">
 							</div>
-						</div>
-					</c:forEach>
-				</div>
-				</div>
+			</c:if> 
+
+	</c:forEach>
+	<!-- End content block --> 
 	</main>
 
 	<footer class="footer">
